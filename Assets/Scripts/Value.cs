@@ -5,4 +5,5 @@ using UnityEngine;
 public class Value : ScriptableObject
 {
     public string Name;
+    public Formula formula;
 }
