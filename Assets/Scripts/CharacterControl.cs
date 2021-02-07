@@ -1,0 +1,40 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CharacterControl : MonoBehaviour
+{
+    Animator animator;
+    new Rigidbody rigidbody;
+
+    [SerializeField]
+    float moveSpeed = 3f;
+    [SerializeField]
+    float rotationSpeed = 5f;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+        rigidbody = GetComponent<Rigidbody>();
+    }
+
+    Vector3 motion;
+    // Update is called once per frame
+    void Update()
+    {
+        motion = new Vector3(Input.GetAxis("Horizontal"), 0f,
+            Input.GetAxis("Vertical")).normalized;
+        animator.SetFloat("ForwardMotion", motion.magnitude);
+    }
+
+    private void FixedUpdate()
+    {
+        rigidbody.velocity = new Vector3(motion.x * moveSpeed, rigidbody.velocity.y, motion.z * moveSpeed);
+        if(motion != Vector3.zero)
+        {
+            Vector3 newDir = Vector3.RotateTowards(transform.forward, motion, rotationSpeed * Time.fixedDeltaTime, 0);
+            transform.rotation = Quaternion.LookRotation(newDir);
+        }
+    }
+}
