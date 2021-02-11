@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class EquippedItemsPanel : ItemPanel
 {
-    [SerializeField]
-    Equipment currCharacter;
-    [SerializeField]
-    GameObject button;
+    List<ItemButton> itemButtons;
 
-    void Start()
+    private void OnEnable()
     {
-        Show();
+        if(itemButtons == null)
+        {
+            itemButtons = new List<ItemButton>();
+            Show();
+            inventoryManager.equipment.onChange += UpdatePanel;
+        }
+        UpdatePanel();
     }
 
     public override void OnInteract(int id)
@@ -19,17 +22,21 @@ public class EquippedItemsPanel : ItemPanel
         
     }
 
-    public override void Show()
+    public override void UpdatePanel()
     {
-        for (int i = 0; i < currCharacter.equipmentSlots.Length; i++)
+        for(int i = 0; i < itemButtons.Count; i++)
         {
-            GameObject newButton = Instantiate(button, transform);
-            newButton.GetComponent<ItemButton>().Set(currCharacter.equipmentSlots[i].equipped, this);
+            itemButtons[i].Set(inventoryManager.equipment.equipmentSlots[i].equipped, this);
         }
     }
 
-    public override void UpdatePanel()
+    public override void Show()
     {
-        
+        for (int i = 0; i < inventoryManager.equipment.equipmentSlots.Length; i++)
+        {
+            GameObject newButton = Instantiate(buttonPrefab, transform);
+            itemButtons.Add(newButton.GetComponent<ItemButton>());
+            itemButtons[i].Set(inventoryManager.equipment.equipmentSlots[i].equipped, this);
+        }
     }
 }

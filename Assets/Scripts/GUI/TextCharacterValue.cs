@@ -7,22 +7,27 @@ public class TextCharacterValue : MonoBehaviour
 {
     public Value trackValue;
     public Character character;
+    Text text;
 
     void UpdateText()
     {
         string str = character.statsContainer.GetText(trackValue);
-        GetComponent<Text>().text = str;
+        if(text == null)
+        {
+            text = GetComponent<Text>();
+        }
+        text.text = str;
     }
-
-    /*// Start is called before the first frame update
-    void Start()
-    {
-        character.statsContainer.Subscribe(UpdateText, trackValue);
-        UpdateText();
-    }*/
 
     public void Set(Value _trackValue, Character _character)
     {
-        GetComponent<Text>().text = _trackValue.Name;
+        character = _character;
+        trackValue = _trackValue;
+        if (text == null)
+        {
+            text = GetComponent<Text>();
+        }
+        text.text = character.statsContainer.GetText(trackValue);
+        character.statsContainer.Subscribe(UpdateText, trackValue);
     }
 }

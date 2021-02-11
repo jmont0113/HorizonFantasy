@@ -59,6 +59,13 @@ public class ValueFloatReference : ValueReference
             return valueBase.Name + " " + value.ToString();
         }
     }
+
+    internal void Subtract(float sum)
+    {
+        value -= sum;
+        onChange?.Invoke();
+        base.RecalculateDependencies();
+    }
 }
 
 public class ValueIntReference : ValueReference
@@ -91,5 +98,12 @@ public class ValueIntReference : ValueReference
         {
             return valueBase.Name + " " + value.ToString();
         }
+    }
+
+    internal void Subtract(int sum)
+    {
+        value -= sum;
+        onChange?.Invoke();
+        base.RecalculateDependencies();
     }
 }

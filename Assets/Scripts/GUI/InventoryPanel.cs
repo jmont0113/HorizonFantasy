@@ -6,16 +6,18 @@ public class InventoryPanel : ItemPanel
 {
     List<ItemButton> buttons;
 
-    void Start()
-    {
-        
-    }
-
     public override void OnInteract(int id)
     {
         ItemInstance item = inventoryManager.inventory.GetItem(id);
         if(inventoryManager.equipment.CheckAvailableSlots(item))
         {
+            Item previousItem = inventoryManager.equipment.GetItemSlot(item.itemBase.itemType);
+            if(previousItem != null)
+            {
+                inventoryManager.character.statsContainer.Subtract(previousItem.stats);
+                inventoryManager.inventory.AddItem(previousItem);
+            }
+            inventoryManager.character.statsContainer.Sum(item.itemBase.stats);
             inventoryManager.equipment.Equip(item.itemBase);
             inventoryManager.inventory.RemoveItem(item.itemBase);
             UpdatePanel();
@@ -24,12 +26,7 @@ public class InventoryPanel : ItemPanel
 
     public override void Show()
     {
-        List<ItemInstance> items = inventoryManager.inventory.GetInventory();
-        for (int i = 0; i < items.Count; i++)
-        {
-            GameObject newButton = Instantiate(buttonPrefab, transform);
-            newButton.GetComponent<ItemButton>().Set(items[i], this);
-        }
+
     }
 
     public override void UpdatePanel()

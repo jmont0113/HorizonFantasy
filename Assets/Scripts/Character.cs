@@ -32,6 +32,64 @@ public class StatsContainer
         }
     }
 
+    public  void Sum(ValueContainer stats)
+    {
+        int integerIndex = 0;
+        int floatIndex = 0; 
+        for(int i = 0; i < stats.values.Count; i++)
+        {
+            if(stats.values[i].GetType() == typeof(ValueFloat))
+            {
+                Sum(stats.values[i], stats.floats[floatIndex]);
+                floatIndex++;
+            }
+            else
+            {
+                Sum(stats.values[i], stats.integers[integerIndex]);
+                integerIndex++;
+            }
+        }
+    }
+
+    public void Subtract(Value value, float sum)
+    {
+        ValueReference valueReference = valueList.Find(x => x.valueBase == value);
+        if (valueReference != null)
+        {
+            ValueFloatReference reference = (ValueFloatReference)valueReference;
+            reference.Subtract(sum);
+        }
+    }
+
+    public void Subtract(Value value, int sum)
+    {
+        ValueReference valueReference = valueList.Find(x => x.valueBase == value);
+        if (valueReference != null)
+        {
+            ValueIntReference reference = (ValueIntReference)valueReference;
+            reference.Subtract(sum);
+        }
+    }
+
+    public void Subtract(ValueContainer stats)
+    {
+        int integerIndex = 0;
+        int floatIndex = 0;
+        for (int i = 0; i < stats.values.Count; i++)
+        {
+            if (stats.values[i].GetType() == typeof(ValueFloat))
+            {
+                Subtract(stats.values[i], stats.floats[floatIndex]);
+                floatIndex++;
+            }
+            else
+            {
+                Subtract(stats.values[i], stats.integers[integerIndex]);
+                integerIndex++;
+            }
+        }
+    }
+
     public void Get(Value value, out int state)
     {
         ValueReference valueReference = valueList.Find(x => x.valueBase == value);
@@ -115,7 +173,6 @@ public class Character : MonoBehaviour
     public ValueStructure statsStructure;
     public StatsContainer statsContainer;
 
-    // Start is called before the first frame update
     void Start()
     {
         Init();
@@ -186,14 +243,5 @@ public class Character : MonoBehaviour
             statsContainer.Sum(valueReference.valueBase, formula.Calculate(statsContainer));
         }
 
-    }
-
-    public Value testReferenceValue;
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.X))
-        {
-            statsContainer.Sum(testReferenceValue, 1);
-        }
     }
 }

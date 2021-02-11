@@ -8,13 +8,15 @@ public class StatsPanel : MonoBehaviour
     ValueStructure characterStats;
     [SerializeField]
     GameObject text;
+    [SerializeField]
+    Character character;
 
     void Start()
     {
         for(int i = 0; i < characterStats.values.Count; i++)
         {
             GameObject newText = Instantiate(text, transform);
-            newText.GetComponent<TextCharacterValue>().Set(characterStats.values[i], null);
+            newText.GetComponent<TextCharacterValue>().Set(characterStats.values[i], character);
         }
     }
 }

@@ -9,7 +9,7 @@ public class DebugManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.I))
         {
-            guiCanvas.SetActive(guiCanvas.activeInHierarchy);
+            guiCanvas.SetActive(!guiCanvas.activeInHierarchy);
         }
     }
 }

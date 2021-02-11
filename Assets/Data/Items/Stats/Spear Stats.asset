@@ -10,14 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ccd9c72c8d9fdd4f882f9e67bb8907e, type: 3}
-  m_Name: FireBall
+  m_Name: Spear Stats
   m_EditorClassIdentifier: 
   values:
-  - {fileID: 11400000, guid: 93f05c0b22031c84ba731f5b69b4a850, type: 2}
-  - {fileID: 11400000, guid: 4e146675eafbf3d47a09173de3e10563, type: 2}
-  - {fileID: 11400000, guid: 6531f901f4b72e348a0d33b051f5e8b6, type: 2}
   - {fileID: 11400000, guid: 9031f3e8620d927458288668438a95cc, type: 2}
-  - {fileID: 11400000, guid: 7a715e4e7769a2f4abb9ad97fdc25e97, type: 2}
-  integers: 90010000170000000c0000004200000007000000
+  integers: f4010000170000000c00000042000000
   floats:
-  - 18
+  - 0.22

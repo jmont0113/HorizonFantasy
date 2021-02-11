@@ -33,8 +33,8 @@ public class Equipment : MonoBehaviour
     [SerializeField]
     List<ItemType> availableSlots;
     public EquipmentSlot[] equipmentSlots;
+    public Action onChange;
 
-    // Start is called before the first frame update
     void Awake()
     {
         Init();
@@ -63,5 +63,15 @@ public class Equipment : MonoBehaviour
     {
         int slotNum = availableSlots.FindIndex(x => x == itemBase.itemType);
         Equip(itemBase, slotNum);
+        if(onChange != null)
+        {
+            onChange.Invoke();
+        }
+    }
+
+    internal Item GetItemSlot(ItemType itemType)
+    {
+        int slot = availableSlots.FindIndex(x => x == itemType);
+        return equipmentSlots[slot].equipped;
     }
 }
