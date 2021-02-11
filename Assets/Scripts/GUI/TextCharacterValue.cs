@@ -13,16 +13,16 @@ public class TextCharacterValue : MonoBehaviour
         string str = character.statsContainer.GetText(trackValue);
         GetComponent<Text>().text = str;
     }
-    // Start is called before the first frame update
+
+    /*// Start is called before the first frame update
     void Start()
     {
         character.statsContainer.Subscribe(UpdateText, trackValue);
         UpdateText();
-    }
+    }*/
 
-    // Update is called once per frame
-    void Update()
+    public void Set(Value _trackValue, Character _character)
     {
-        
+        GetComponent<Text>().text = _trackValue.Name;
     }
 }

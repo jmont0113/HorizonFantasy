@@ -7089,8 +7089,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemOnStart:
   - {fileID: 11400000, guid: df74c467e09edea47816a1f76a47d43f, type: 2}
-  - {fileID: 11400000, guid: 11a495ee1657e244cb90884b21f3e5aa, type: 2}
   - {fileID: 11400000, guid: df74c467e09edea47816a1f76a47d43f, type: 2}
+  - {fileID: 11400000, guid: 11a495ee1657e244cb90884b21f3e5aa, type: 2}
   - {fileID: 11400000, guid: 11a495ee1657e244cb90884b21f3e5aa, type: 2}
 --- !u!114 &180846968
 MonoBehaviour:
@@ -7104,6 +7104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4598d8c64fb5c94da27be4eed145644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  availableSlots: 00000000020000000300000001000000
 --- !u!1 &5972392060467829171
 GameObject:
   m_ObjectHideFlags: 0

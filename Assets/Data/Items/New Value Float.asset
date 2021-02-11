@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33d20bc49f6e88d4fa65e0eadd317d0b, type: 3}
   m_Name: New Value Float
   m_EditorClassIdentifier: 
-  Name: 
+  Name: This is some kinda float
   formula: {fileID: 0}
