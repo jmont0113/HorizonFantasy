@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00947fd69e05d69409f5f30e54b07fb4, type: 3}
-  m_Name: UnityChan
+  m_Name: Bandit
   m_EditorClassIdentifier: 
-  Name: Vivian
-  characterPortrait: {fileID: 2800000, guid: 388715be6dfa5d747bb47cde223c68b2, type: 3}
+  Name: Bandit
+  characterPortrait: {fileID: 2800000, guid: 23ea2b6fcf1605a4a98a71d642874787, type: 3}

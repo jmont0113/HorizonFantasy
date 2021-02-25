@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00947fd69e05d69409f5f30e54b07fb4, type: 3}
-  m_Name: UnityChan
+  m_Name: Turtle Shell
   m_EditorClassIdentifier: 
-  Name: Vivian
-  characterPortrait: {fileID: 2800000, guid: 388715be6dfa5d747bb47cde223c68b2, type: 3}
+  Name: Turtle Shell
+  characterPortrait: {fileID: 2800000, guid: 4fa1f7ca9a413c647a8285136fbe4f34, type: 3}
