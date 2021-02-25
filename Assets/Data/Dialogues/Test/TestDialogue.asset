@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: TestDialogue
   m_EditorClassIdentifier: 
   text:
-  - 
-  - 
-  - 
-  - 
-  - 
+  - You see a testing dialogue character.
+  - Hello, Vivia, I feel great but need help
+  - You sure are look like a pill
+  - That was nice talking to you
+  - I'm interjecting into dialogue
   actor:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 8ad079a14b6a7fe4cbbc74305f3f0f0d, type: 2}
+  - {fileID: 11400000, guid: 3a46ca7ae5bfc4447b6804ec76d78247, type: 2}
+  - {fileID: 11400000, guid: 8ad079a14b6a7fe4cbbc74305f3f0f0d, type: 2}
+  - {fileID: 11400000, guid: 3a46ca7ae5bfc4447b6804ec76d78247, type: 2}
+  - {fileID: 11400000, guid: 8ad079a14b6a7fe4cbbc74305f3f0f0d, type: 2}

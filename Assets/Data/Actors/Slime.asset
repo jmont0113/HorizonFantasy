@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Slime
   m_EditorClassIdentifier: 
   Name: Slime
-  characterPortrait: {fileID: 2800000, guid: fdc4bcebe6d6fc14fa9eccfd19cb7528, type: 3}
+  characterPortrait: {fileID: 2800000, guid: fdc4b4775d1a7ba4cb197117441afbe3, type: 3}

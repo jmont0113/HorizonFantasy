@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Bandit
   m_EditorClassIdentifier: 
   Name: Bandit
-  characterPortrait: {fileID: 2800000, guid: 23ea2b6fcf1605a4a98a71d642874787, type: 3}
+  characterPortrait: {fileID: 2800000, guid: 921203f8dfa78324aa43d37e2cd53d4c, type: 3}
