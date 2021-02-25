@@ -9,6 +9,8 @@ public class ItemPickUp : InteractableModule
     [SerializeField]
     int count = 1;
 
+    public AudioSource pickupSound;
+
     public override void Interact(GameObject actor)
     {
         Inventory inventory = actor.GetComponent<Inventory>();
@@ -17,5 +19,6 @@ public class ItemPickUp : InteractableModule
             inventory.AddItem(item, count);
         }
         gameObject.SetActive(false);
+        pickupSound.Play();
     }
 }

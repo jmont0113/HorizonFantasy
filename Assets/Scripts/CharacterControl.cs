@@ -12,7 +12,10 @@ public class CharacterControl : MonoBehaviour
     [SerializeField]
     float rotationSpeed = 5f;
 
-    // Start is called before the first frame update
+    public AudioSource walkingSound;
+    public AudioSource steppingSound;
+
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -20,12 +23,36 @@ public class CharacterControl : MonoBehaviour
     }
 
     Vector3 motion;
-    // Update is called once per frame
+
     void Update()
     {
         motion = new Vector3(Input.GetAxis("Horizontal"), 0f,
             Input.GetAxis("Vertical")).normalized;
         animator.SetFloat("ForwardMotion", motion.magnitude);
+
+        if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            walkingSound.Play();
+            steppingSound.Play();
+        }
+ 
+        if (Input.GetKeyDown(KeyCode.A) || (Input.GetKeyDown(KeyCode.LeftArrow)))
+        {
+            walkingSound.Play();
+            steppingSound.Play();
+        }
+
+        if (Input.GetKeyDown(KeyCode.S) || (Input.GetKeyDown(KeyCode.DownArrow)))
+        {
+            walkingSound.Play();
+            steppingSound.Play();
+        }
+
+        if (Input.GetKeyDown(KeyCode.D) || (Input.GetKeyDown(KeyCode.RightArrow)))
+        {
+            walkingSound.Play();
+            steppingSound.Play();
+        }
     }
 
     private void FixedUpdate()
