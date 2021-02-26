@@ -9,7 +9,7 @@ public class Talk : InteractableModule
     {
         if(dialogue != null)
         {
-            DialogueManager.instance.StartDialogue(dialogue);
+            GameManager.instance.dialogueManager.StartDialogue(dialogue);
         }
     }
 }

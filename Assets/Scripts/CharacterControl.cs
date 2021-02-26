@@ -11,26 +11,44 @@ public class CharacterControl : MonoBehaviour
     float moveSpeed = 3f;
     [SerializeField]
     float rotationSpeed = 5f;
+    public GameObject target;
+    Transform characterTransform;
+    InteractionController interactionController;
 
     public AudioSource walkingSound;
     public AudioSource steppingSound;
 
-
-    void Start()
+    public void Init(GameObject newTarget)
     {
-        animator = GetComponent<Animator>();
-        rigidbody = GetComponent<Rigidbody>();
+        target = newTarget;
+        animator = target.GetComponent<Animator>();
+        rigidbody = target.GetComponent<Rigidbody>();
+        characterTransform = target.transform;
+        interactionController = target.GetComponent<InteractionController>();
     }
 
     Vector3 motion;
 
     void Update()
     {
+        if(target == null) { return; }
+
         motion = new Vector3(Input.GetAxis("Horizontal"), 0f,
             Input.GetAxis("Vertical")).normalized;
         animator.SetFloat("ForwardMotion", motion.magnitude);
+        
+        if (Input.GetMouseButtonDown(0))
+        {
+            interactionController.CheckInteract();
+        }
 
-        if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        if(Input.GetKeyDown(KeyCode.I))
+        {
+            GameManager.instance.guiManager.OpenInventory(true);
+            GameManager.instance.SetControlScheme(ControlScheme.Inventory);
+        }
+
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             walkingSound.Play();
             steppingSound.Play();
@@ -57,11 +75,13 @@ public class CharacterControl : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (target == null) { return; }
+
         rigidbody.velocity = new Vector3(motion.x * moveSpeed, rigidbody.velocity.y, motion.z * moveSpeed);
         if(motion != Vector3.zero)
         {
-            Vector3 newDir = Vector3.RotateTowards(transform.forward, motion, rotationSpeed * Time.fixedDeltaTime, 0);
-            transform.rotation = Quaternion.LookRotation(newDir);
+            Vector3 newDir = Vector3.RotateTowards(characterTransform.forward, motion, rotationSpeed * Time.fixedDeltaTime, 0);
+            characterTransform.rotation = Quaternion.LookRotation(newDir);
         }
     }
 }

@@ -10,23 +10,7 @@ public class InteractionController : MonoBehaviour
     [SerializeField]
     Vector3 boxHalfSize = Vector3.one;
 
-    void Update()
-    {
-        if(Input.GetMouseButtonDown(0))
-        {
-            //**TODO** remove this, and seperate into a different controller
-            if (DialogueManager.instance.canvas.activeInHierarchy == true)
-            {
-                DialogueManager.instance.Next();
-            }
-            else
-            {
-                CheckInteract();
-            }
-        }
-    }
-
-    void CheckInteract()
+    public void CheckInteract()
     {
         Collider[] colliders = Physics.OverlapBox(boxPivot.position, boxHalfSize);
         foreach(Collider c in colliders)
