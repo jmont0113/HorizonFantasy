@@ -1,21 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b344921427c110a4bbec5115d29df752, type: 3}
-  m_Name: Enemy
-  m_EditorClassIdentifier: 
-  Name: 
-  model: {fileID: 0}
-  stats: {fileID: 613094584175208431}
---- !u!114 &613094584175208431
+--- !u!114 &-7543427444082497860
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,3 +26,18 @@ MonoBehaviour:
   integers: 000000000000000000000000000000000000000000000000000000000000000000000000
   floats:
   - 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b344921427c110a4bbec5115d29df752, type: 3}
+  m_Name: Boar
+  m_EditorClassIdentifier: 
+  Name: Boar
+  model: {fileID: 166316, guid: 8dd46be81be5b5545a3c72724f5e6177, type: 3}
+  stats: {fileID: -7543427444082497860}

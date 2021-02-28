@@ -23,7 +23,9 @@ public class EnemySpawner : MonoBehaviour
 
         //Quaternion.identity
         GameObject go = Instantiate(container.enemyGroupPrefab, transform.position, Quaternion.Euler(0f, 180f, 0f));
-        go.GetComponent<EnemyGroup>().spawnPoint = transform;
+        EnemyGroup enemyGroup = go.GetComponent<EnemyGroup>();
+        enemyGroup.spawnPoint = transform;
+        enemyGroup.encounter = container.GetEncounter();
     }
 
     private void OnDrawGizmos()

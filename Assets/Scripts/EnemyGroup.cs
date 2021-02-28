@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyGroup : MonoBehaviour
 {
+    public EnemyEncounter encounter;
     public Transform spawnPoint;
     EnemySpawner enemySpawner;
     NavMeshAgent agent;

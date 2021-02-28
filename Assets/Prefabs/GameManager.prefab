@@ -86,6 +86,7 @@ MonoBehaviour:
   dialogueManager: {fileID: 1346196014}
   characterControl: {fileID: 1346196016}
   inventoryControl: {fileID: 2090423869}
+  dialogueControl: {fileID: 1639050293742433824}
   character: {fileID: 0}
   guiManager: {fileID: 2090423868}
 --- !u!114 &1346196016
