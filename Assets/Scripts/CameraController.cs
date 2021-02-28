@@ -1,11 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
     [SerializeField]
-    GameObject target;
+    Transform target;
     [SerializeField]
     float distance;
     [SerializeField]
@@ -16,5 +17,12 @@ public class CameraController : MonoBehaviour
     {
         Vector3 newPos = target.transform.position + transform.forward * -distance;
         transform.position = Vector3.SmoothDamp(transform.position, newPos, ref velocity, cameraSmooth);
+    }
+
+    internal void ChangeTarget(Transform _target, float _distance, float _smooth)
+    {
+        target = _target;
+        distance = _distance;
+        cameraSmooth = _smooth;
     }
 }

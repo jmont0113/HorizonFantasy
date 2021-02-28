@@ -76,4 +76,13 @@ public class EnemyGroup : MonoBehaviour
             }
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Party party = collision.gameObject.GetComponent<Party>();
+        if(party != null)
+        {
+            GameManager.instance.combat.InitiateCombat(encounter, party);
+        }
+    }
 }

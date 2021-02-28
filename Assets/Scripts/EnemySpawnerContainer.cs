@@ -9,7 +9,11 @@ public class EnemySpawnerContainer : MonoBehaviour
 
     public EnemyEncounter GetEncounter()
     {
-        if(encounterList == null) { return null; }
+        if(encounterList == null) 
+        {
+            Debug.LogWarning("No encounter list assigned to the EnemySpawnContainer!");
+            return null; 
+        }
 
         int i = UnityEngine.Random.Range(0, encounterList.encounters.Count);
         return encounterList.encounters[i];

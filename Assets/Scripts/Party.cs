@@ -4,13 +4,5 @@ using UnityEngine;
 
 public class Party : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
+    public List<CombatCharacter> members;
 }

@@ -6,4 +6,5 @@ public class CombatArena : MonoBehaviour
 {
     public List<Transform> characterSpawnPoints;
     public List<Transform> enemySpawnPoints;
+    public Transform cameraPivot;
 }

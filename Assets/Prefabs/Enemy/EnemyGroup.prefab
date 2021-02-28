@@ -476,7 +476,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 0.85
+  m_Height: 0.75
   m_BaseOffset: -0.1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -492,6 +492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f505f21841ccdee4db2bc32c0c36106d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  encounter: {fileID: 0}
   spawnPoint: {fileID: 0}
   maxTimer: 20
   boxPivot: {fileID: 7829625814157390091}

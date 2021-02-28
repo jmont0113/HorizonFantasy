@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c79419ca955bc34bb00baa28c0cdc36, type: 3}
+  m_Name: DragonEncounter
+  m_EditorClassIdentifier: 
+  encounters:
+  - {fileID: 11400000, guid: a89ea756775e3e5449c9dffc896aa45b, type: 2}
+  - {fileID: 11400000, guid: f1706b8f12b725648bf16af405f997b5, type: 2}
+  - {fileID: 11400000, guid: e0953f51b9eaf7344a0ce45dd4c751af, type: 2}
