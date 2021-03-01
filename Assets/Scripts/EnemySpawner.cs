@@ -20,8 +20,7 @@ public class EnemySpawner : MonoBehaviour
     private void Spawn()
     {
         if(container == null) { return; }
-        //Quaternion.Euler(0f, 180f, 0f)
-        //Quaternion.identity
+        //Quaternion.Euler(0f, 180f, 0f) or Quaternion.identity
         GameObject go = Instantiate(container.enemyGroupPrefab, transform.position, Quaternion.identity);
         EnemyGroup enemyGroup = go.GetComponent<EnemyGroup>();
         enemyGroup.spawnPoint = transform;
@@ -29,7 +28,7 @@ public class EnemySpawner : MonoBehaviour
     }
 
     private void OnDrawGizmos()
-   {
-        Gizmos.DrawIcon(transform.position, "EnemySpawner", false);
-   }
+    {
+        Gizmos.DrawIcon(transform.position, "EnemySpawner.png", false);
+    }
 }

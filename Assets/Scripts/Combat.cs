@@ -18,6 +18,7 @@ public class Combat : MonoBehaviour
        
         for(int i = 0; i < encounter.enemies.Count; i++)
         {
+            //Quaternion.Euler(0f, 180f, 0f) or Quaternion.identity
             Instantiate(encounter.enemies[i].model, arena.enemySpawnPoints[i].position, Quaternion.identity);
         }
 

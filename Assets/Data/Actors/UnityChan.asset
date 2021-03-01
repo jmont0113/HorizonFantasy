@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: UnityChan
   m_EditorClassIdentifier: 
   Name: Vivian
-  characterPortrait: {fileID: 2800000, guid: 388715be6dfa5d747bb47cde223c68b2, type: 3}
+  characterPortrait: {fileID: 2800000, guid: b19ef563f1c594549afb9a522a722b1f, type: 3}

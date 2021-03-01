@@ -11,7 +11,16 @@ public class ValueContainerEditor : Editor
     {
         serializedObject.Update();
 
-        Show(serializedObject.FindProperty("values"));
+        SerializedProperty copyOf = serializedObject.FindProperty("copyOf");
+        if(copyOf.objectReferenceValue == null)
+        {
+            Show(serializedObject.FindProperty("values"));
+        }
+        else
+        {
+            SerializedObject so = new SerializedObject(serializedObject.FindProperty("copyOf").objectReferenceValue);
+            Show(so.FindProperty("values"));
+        }
 
         serializedObject.ApplyModifiedProperties();
     }

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67edb474c03ed3f4baf646a6ea17f30b, type: 3}
   m_Name: CharacterStats
   m_EditorClassIdentifier: 
+  copyOf: {fileID: 0}
   values:
   - {fileID: 11400000, guid: 93f05c0b22031c84ba731f5b69b4a850, type: 2}
   - {fileID: 11400000, guid: 64cf44073dade51499e879be9f26c008, type: 2}

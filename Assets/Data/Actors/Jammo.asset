@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e76b605cebb463b42aec28729f7e83fd, type: 3}
-  m_Name: DragonEncounter1
+  m_Script: {fileID: 11500000, guid: 00947fd69e05d69409f5f30e54b07fb4, type: 3}
+  m_Name: Jammo
   m_EditorClassIdentifier: 
-  enemies:
-  - {fileID: 11400000, guid: 63a16513b957ab94688f81b8405448f2, type: 2}
+  Name: James
+  characterPortrait: {fileID: 2800000, guid: eef2049b4b913c445a28c89c9a184e0a, type: 3}

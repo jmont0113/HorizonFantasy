@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e76b605cebb463b42aec28729f7e83fd, type: 3}
-  m_Name: DragonEncounter1
+  m_Script: {fileID: 11500000, guid: 33d20bc49f6e88d4fa65e0eadd317d0b, type: 3}
+  m_Name: ActionTime
   m_EditorClassIdentifier: 
-  enemies:
-  - {fileID: 11400000, guid: 63a16513b957ab94688f81b8405448f2, type: 2}
+  Name: ActionTime
+  formula: {fileID: 0}
