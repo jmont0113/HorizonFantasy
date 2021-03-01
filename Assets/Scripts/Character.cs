@@ -170,35 +170,31 @@ public class StatsContainer
 
 public class Character : MonoBehaviour
 {
-    public ValueStructure statsStructure;
+    
     public StatsContainer statsContainer;
+    Entity entity;
 
     void Start()
     {
-        Init();
+        
     }
 
-    void Init()
+    public void Init(Entity e)
     {
-        InitValues();
+        entity = e;
+        Init(entity.stats);
+    }
+
+    public void Init(ValueContainer valueContainer)
+    {
+        InitValues(valueContainer);
         InitFormulas();
     }
 
-    private void InitValues()
+    private void InitValues(ValueContainer valueContainer)
     {
         statsContainer = new StatsContainer();
-        for (int i = 0; i < statsStructure.values.Count; i++)
-        {
-            Value value = statsStructure.values[i];
-            if (value is ValueFloat)
-            {
-                statsContainer.valueList.Add(new ValueFloatReference(value, 5f));
-            }
-            if (value is ValueInt)
-            {
-                statsContainer.valueList.Add(new ValueIntReference(value, 5)); //change this for testing purposes
-            }
-        }
+        valueContainer.Copy(ref statsContainer);
     }
 
     private void InitFormulas()

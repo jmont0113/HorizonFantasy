@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3888548077382636194
+--- !u!114 &-4739850960246193429
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -29,8 +29,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d554cb39e8788849bc9dd4d1b32ac7c, type: 3}
-  m_Name: Slime
+  m_Name: UnityChan
   m_EditorClassIdentifier: 
-  Name: Slime
-  model: {fileID: 1919012471076396, guid: 6bc30642bd770b445b8e7b86aa8c9ace, type: 3}
-  stats: {fileID: -3888548077382636194}
+  Name: Vivian
+  model: {fileID: 3828688119541841869, guid: 5b69e7be372d53748b6f577cd824a176, type: 3}
+  stats: {fileID: -4739850960246193429}

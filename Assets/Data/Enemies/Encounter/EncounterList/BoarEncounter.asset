@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c79419ca955bc34bb00baa28c0cdc36, type: 3}
   m_Name: BoarEncounter
   m_EditorClassIdentifier: 
-  encounters: []
+  encounters:
+  - {fileID: 11400000, guid: 5a8769c4e632a3f4990f2c90c4d6d7fb, type: 2}
+  - {fileID: 11400000, guid: 19ba87844faa1b041a0db43973859ea6, type: 2}
+  - {fileID: 11400000, guid: 1263f0b609404af46835f0dddaf548f6, type: 2}

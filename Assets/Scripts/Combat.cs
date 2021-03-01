@@ -6,6 +6,7 @@ public class Combat : MonoBehaviour
 {
     [SerializeField] CombatArena defaultArena;
     [SerializeField] CombatLoop combatLoop;
+    [SerializeField] SceneManage sceneManage;
 
     public void InitiateCombat(EnemyEncounter encounter, Party party, CombatArena arena = null)
     {
@@ -21,7 +22,9 @@ public class Combat : MonoBehaviour
         for(int i = 0; i < encounter.enemies.Count; i++)
         {
             //Quaternion.Euler(0f, 180f, 0f) or Quaternion.identity
-            Instantiate(encounter.enemies[i].model, arena.enemySpawnPoints[i].position, Quaternion.Euler(0f, 180f, 0f));
+            GameObject go = Instantiate(encounter.enemies[i].model, arena.enemySpawnPoints[i].position, Quaternion.Euler(0f, 180f, 0f));
+            go.AddComponent<CombatCharacter>();
+            Character character = go.AddComponent<Character>();
         }
 
         for(int i = 0; i < party.members.Count; i++)
@@ -29,6 +32,7 @@ public class Combat : MonoBehaviour
             party.members[i].transform.position = arena.characterSpawnPoints[i].position;
         }
 
+        sceneManage.Set(false);
         combatLoop.Init(party);
     }
 }

@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c79419ca955bc34bb00baa28c0cdc36, type: 3}
   m_Name: SlimeEncounter
   m_EditorClassIdentifier: 
-  encounters: []
+  encounters:
+  - {fileID: 11400000, guid: c02fb93bd398e7646aed682543863155, type: 2}
+  - {fileID: 11400000, guid: 1f7a2ae569aa0c2428c5a5f9f378a844, type: 2}
+  - {fileID: 11400000, guid: 3d75dae9a3e34a7489943cda3c0186e0, type: 2}

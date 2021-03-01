@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Data/Enemy Encounter")]
 public class EnemyEncounter : ScriptableObject
 {
-    public List<Enemy> enemies;
+    public List<Entity> enemies;
 }
