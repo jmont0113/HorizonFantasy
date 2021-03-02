@@ -18,13 +18,16 @@ public class Combat : MonoBehaviour
         GameManager.instance.SetControlScheme(ControlScheme.Combat);
         CameraController camera = Camera.main.GetComponent<CameraController>();
         camera.ChangeTarget(arena.cameraPivot, 0f, 0f);
-       
+
+        List<CombatCharacter> enemies = new List<CombatCharacter>();
         for(int i = 0; i < encounter.enemies.Count; i++)
         {
             //Quaternion.Euler(0f, 180f, 0f) or Quaternion.identity
             GameObject go = Instantiate(encounter.enemies[i].model, arena.enemySpawnPoints[i].position, Quaternion.Euler(0f, 180f, 0f));
-            go.AddComponent<CombatCharacter>();
+            enemies.Add(go.AddComponent<CombatCharacter>());
             Character character = go.AddComponent<Character>();
+            character.Init(encounter.enemies[i]);
+            go.AddComponent<ActionTimer>();
         }
 
         for(int i = 0; i < party.members.Count; i++)
@@ -33,6 +36,6 @@ public class Combat : MonoBehaviour
         }
 
         sceneManage.Set(false);
-        combatLoop.Init(party);
+        combatLoop.Init(party, enemies);
     }
 }

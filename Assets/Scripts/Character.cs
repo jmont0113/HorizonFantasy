@@ -173,16 +173,13 @@ public class Character : MonoBehaviour
     
     public StatsContainer statsContainer;
     public Entity entity;
-
-    void Start()
-    {
-        
-    }
+    public List<Ability> abilities;
 
     public void Init(Entity e)
     {
         entity = e;
         Init(entity.stats);
+        abilities = new List<Ability>(e.abilities);
     }
 
     public void Init(ValueContainer valueContainer)

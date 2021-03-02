@@ -36,18 +36,6 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    /*
-     * void Start()
-    {
-        inventory = new List<ItemInstance>();
-        for (int i = 0; i < itemOnStart.Count; i++)
-        {
-            AddItem(itemOnStart[i]);
-        }
-    }
-     * 
-     */
-
     public List<ItemInstance> GetInventory()
     {
         return inventory;

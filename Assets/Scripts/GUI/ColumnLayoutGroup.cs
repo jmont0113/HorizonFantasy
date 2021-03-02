@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ColumnLayoutGroup : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         float width = gameObject.GetComponent<RectTransform>().rect.width;

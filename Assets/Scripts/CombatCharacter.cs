@@ -7,12 +7,22 @@ public class CombatCharacter : MonoBehaviour
 {
     public ActionTimer actionTimer;
     public Character character;
+    public List<Ability> abilities;
+
+    public bool Ready
+    {
+        get 
+        {
+            return actionTimer.Ready;
+        }
+    }
 
     private void Start()
     {
         actionTimer = GetComponent<ActionTimer>();
         character = GetComponent<Character>();
         actionTimer.Init();
+        abilities = new List<Ability>(character.abilities);
     }
 
     public void Tick(float _tick)

@@ -30,6 +30,11 @@ MonoBehaviour:
   model: {fileID: 3828688119541841869, guid: 5b69e7be372d53748b6f577cd824a176, type: 3}
   stats: {fileID: 5228111363923596184}
   actor: {fileID: -5988443745149372984}
+  abilities:
+  - {fileID: 11400000, guid: ea03820f48d237d4b9f2d6849a677c6a, type: 2}
+  - {fileID: 11400000, guid: 2a6bebf6b01ddce48abe586d0dea2b51, type: 2}
+  - {fileID: 11400000, guid: 383e435361d87d44b9be15cf81f185fb, type: 2}
+  - {fileID: 11400000, guid: ec6099bae097b3643898e7e376a6448b, type: 2}
   entityType: 1
 --- !u!114 &5228111363923596184
 MonoBehaviour:

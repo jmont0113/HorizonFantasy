@@ -18,6 +18,7 @@ public class Entity : ScriptableObject
     public GameObject model;
     public ValueContainer stats;
     public Actor actor;
+    public List<Ability> abilities;
     [ReadOnly] public EntityType entityType;
 
     private void OnEnable()
