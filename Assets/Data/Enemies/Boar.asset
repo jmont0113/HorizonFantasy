@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3888548077382636194
+--- !u!114 &-1049002324580001333
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14,10 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   copyOf: {fileID: 11400000, guid: 76700b848056d814499bd05c20106d04, type: 2}
   values: []
-  integers: 000000000000000000000000000000000000000000000000000000000000000000000000
+  integers: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   floats:
-  - 0
-  - 0
   - 0
 --- !u!114 &11400000
 MonoBehaviour:
@@ -33,4 +31,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Boar
   model: {fileID: 166316, guid: 8dd46be81be5b5545a3c72724f5e6177, type: 3}
-  stats: {fileID: -3888548077382636194}
+  stats: {fileID: -1049002324580001333}
+  actor: {fileID: 0}
+  entityType: 0

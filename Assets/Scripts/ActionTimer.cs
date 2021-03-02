@@ -5,15 +5,18 @@ using UnityEngine;
 
 public class ActionTimer : MonoBehaviour
 {
-    public Value value;
+    public Value currentATValue;
+    [SerializeField] Value targetATValue;
     public ValueFloatReference currentAT;
+    public ValueFloatReference targetATRef;
     [SerializeField] float targetAT = 5f;
-    public StatusBar myBar;
 
     public void Init()
     {
-        currentAT = new ValueFloatReference(value);
+        currentAT = new ValueFloatReference(currentATValue);
         currentAT.onChange += CheckAT;
+        targetATRef = new ValueFloatReference(targetATValue, targetAT);
+        targetATRef.onChange += CheckAT;
     }
 
     public void Tick(float _tick)
@@ -23,12 +26,12 @@ public class ActionTimer : MonoBehaviour
 
     internal float GetFillAmount(Value trackValue)
     {
-        return currentAT.value / targetAT;
+        return currentAT.value / targetATRef.value;
     }
 
     void CheckAT()
     {
-        if(currentAT.value > targetAT)
+        if(currentAT.value > targetATRef.value)
         {
             Debug.Log("I'm ready for action!");
         }

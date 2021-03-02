@@ -12,7 +12,6 @@ public class CombatLoop : MonoBehaviour
         foreach(CombatCharacter character in party.members)
         {
             characters.Add(character);
-            character.Init();
         }
     }
 

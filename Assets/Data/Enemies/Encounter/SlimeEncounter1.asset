@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: SlimeEncounter1
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 11400000, guid: abe66c270c36743468a2928e2a5aac8e, type: 2}
+  - {fileID: 11400000, guid: 7dd410f698509a441829c96405507ec5, type: 2}

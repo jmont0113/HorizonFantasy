@@ -160,6 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultArena: {fileID: 0}
   combatLoop: {fileID: 0}
+  sceneManage: {fileID: 8051978983042266827}
 --- !u!114 &8051978983042266827
 MonoBehaviour:
   m_ObjectHideFlags: 0

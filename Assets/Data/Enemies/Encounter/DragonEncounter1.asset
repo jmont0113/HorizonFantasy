@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: DragonEncounter1
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 11400000, guid: 820b158f3acb5224c9972e9dffef6f1d, type: 2}
+  - {fileID: 11400000, guid: 228de45ea32248e4580ded06cd0ac98b, type: 2}

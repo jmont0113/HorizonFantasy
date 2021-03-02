@@ -35,7 +35,8 @@ public class Equipment : MonoBehaviour
     public EquipmentSlot[] equipmentSlots;
     public Action onChange;
 
-    void Awake()
+    //void awake
+    void Start()
     {
         Init();
     }

@@ -8,7 +8,7 @@ public class Party : MonoBehaviour
     public List<Entity> onStart;
     [SerializeField] Transform objectContainer;
 
-    private void Start()
+    private void Awake()
     {
         members = new List<CombatCharacter>();
         for(int i = 0; i < onStart.Count; i++)

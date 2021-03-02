@@ -6,16 +6,13 @@ using UnityEngine;
 public class CombatCharacter : MonoBehaviour
 {
     public ActionTimer actionTimer;
+    public Character character;
 
     private void Start()
     {
         actionTimer = GetComponent<ActionTimer>();
-    }
-
-    public void Init()
-    {
+        character = GetComponent<Character>();
         actionTimer.Init();
-        actionTimer.myBar.Set(actionTimer.value, this);
     }
 
     public void Tick(float _tick)

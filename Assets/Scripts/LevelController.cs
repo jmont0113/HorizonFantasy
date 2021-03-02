@@ -17,7 +17,7 @@ public class LevelController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         if(Input.GetKeyDown(KeyCode.Pause) || Input.GetKeyDown(KeyCode.Space))
         {

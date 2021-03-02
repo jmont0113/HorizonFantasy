@@ -172,7 +172,7 @@ public class Character : MonoBehaviour
 {
     
     public StatsContainer statsContainer;
-    Entity entity;
+    public Entity entity;
 
     void Start()
     {
