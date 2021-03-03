@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Defend
   m_EditorClassIdentifier: 
   Name: Defend
+  spellTargetArea: 2

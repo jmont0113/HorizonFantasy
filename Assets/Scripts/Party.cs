@@ -21,6 +21,7 @@ public class Party : MonoBehaviour
     {
         GameObject go = Instantiate(entity.model);
         go.transform.parent = objectContainer;
+        go.transform.localPosition = Vector3.zero;
         go.GetComponent<Character>().Init(entity);
         members.Add(go.GetComponent<CombatCharacter>());
     }

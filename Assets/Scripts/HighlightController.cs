@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,16 @@ public class HighlightController : MonoBehaviour
     private void Start()
     {
         highlighters = new List<GameObject>();
+    }
+
+    internal void Highlight(List<CombatCharacter> targets)
+    {
+        List<Vector3> positions = new List<Vector3>();
+        for (int i = 0; i < targets.Count; i++)
+        {
+            positions.Add(targets[i].transform.position);
+        }
+        Highlight(positions);
     }
 
     public void Highlight(List<Vector3> pos)

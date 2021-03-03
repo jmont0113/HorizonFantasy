@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Retreat
   m_EditorClassIdentifier: 
   Name: Retreat
+  spellTargetArea: 3

@@ -1,6 +1,42 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3703702597513051186
+--- !u!114 &-5988443745149372984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00947fd69e05d69409f5f30e54b07fb4, type: 3}
+  m_Name: Actor
+  m_EditorClassIdentifier: 
+  Name: Vivian
+  characterPortrait: {fileID: 21300000, guid: bb417eb1d6148e74886b82f060cef112, type: 3}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d554cb39e8788849bc9dd4d1b32ac7c, type: 3}
+  m_Name: Dark Vivian
+  m_EditorClassIdentifier: 
+  Name: Dark Vivian
+  model: {fileID: 3828688119541841869, guid: 5b69e7be372d53748b6f577cd824a176, type: 3}
+  stats: {fileID: 5228111363923596184}
+  actor: {fileID: -5988443745149372984}
+  abilities:
+  - {fileID: 11400000, guid: ea03820f48d237d4b9f2d6849a677c6a, type: 2}
+  - {fileID: 11400000, guid: 2a6bebf6b01ddce48abe586d0dea2b51, type: 2}
+  - {fileID: 11400000, guid: 383e435361d87d44b9be15cf81f185fb, type: 2}
+  - {fileID: 11400000, guid: ec6099bae097b3643898e7e376a6448b, type: 2}
+  entityType: 2
+--- !u!114 &5228111363923596184
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14,42 +50,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   copyOf: {fileID: 11400000, guid: 76700b848056d814499bd05c20106d04, type: 2}
   values: []
-  integers: ee02000064000000000000000000000000000000000000000000000000000000000000005802000000000000
+  integers: c8000000f4010000000000000000000000000000000000000000000000000000000000006400000064000000
   floats:
   - 0
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d554cb39e8788849bc9dd4d1b32ac7c, type: 3}
-  m_Name: UnityChan
-  m_EditorClassIdentifier: 
-  Name: Vivian
-  model: {fileID: 3828688119541841869, guid: 5b69e7be372d53748b6f577cd824a176, type: 3}
-  stats: {fileID: -3703702597513051186}
-  actor: {fileID: 9206474175568644162}
-  abilities:
-  - {fileID: 11400000, guid: 6e0b6baa5641bc941acfd2aa83ce9a5b, type: 2}
-  - {fileID: 11400000, guid: 2a6bebf6b01ddce48abe586d0dea2b51, type: 2}
-  - {fileID: 11400000, guid: a73b2a02ed7f446479fd58117b75390f, type: 2}
-  - {fileID: 11400000, guid: ec6099bae097b3643898e7e376a6448b, type: 2}
-  entityType: 1
---- !u!114 &9206474175568644162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00947fd69e05d69409f5f30e54b07fb4, type: 3}
-  m_Name: Actor
-  m_EditorClassIdentifier: 
-  Name: Vivian
-  characterPortrait: {fileID: 21300000, guid: b19ef563f1c594549afb9a522a722b1f, type: 3}

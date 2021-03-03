@@ -5,5 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Ability/Base/Attack")]
 public class Attack : Ability
 {
-
+    public override void Activate(CombatCharacter caster, List<CombatCharacter> targets)
+    {
+        
+    }
 }

@@ -1,30 +1,45 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CombatLoop : MonoBehaviour
 {
-    List<CombatCharacter> characters;
+    public List<CombatCharacter> characters;
+    public List<CombatCharacter> enemies;
+    public List<CombatCharacter> allies;
     List<CombatCharacter> awaitingActionQueue;
     [SerializeField] AbilityPanel abilityPanel;
     [SerializeField] HighlightController highlightController;
+    public bool pause;
+    AbilityController abilityController;
 
-    public void Init(Party party, List<CombatCharacter> enemies)
+    private void Start()
+    {
+        abilityController = GetComponent<AbilityController>();
+        characters = null;
+    }
+
+    public void Init(Party _party, List<CombatCharacter> _enemies)
     {
         characters = new List<CombatCharacter>();
-        foreach(CombatCharacter character in party.members)
+        allies = new List<CombatCharacter>();
+        foreach(CombatCharacter character in _party.members)
         {
             characters.Add(character);
+            allies.Add(character);
         }
 
+        enemies = new List<CombatCharacter>();
         //for testing 
-        List<Vector3> enemyPos = new List<Vector3>();
-        foreach (CombatCharacter character in enemies)
+        //List<Vector3> enemyPos = new List<Vector3>();
+        foreach (CombatCharacter character in _enemies)
         {
             characters.Add(character);
-            enemyPos.Add(character.transform.position);
+           // enemyPos.Add(character.transform.position);
+            enemies.Add(character);
         }
-        highlightController.Highlight(enemyPos);
+        //highlightController.Highlight(enemyPos);
 
         awaitingActionQueue = new List<CombatCharacter>();
     }
@@ -39,16 +54,26 @@ public class CombatLoop : MonoBehaviour
             awaitingActionQueue[0].character.transform.position,
             str
             );
+        abilityController.InitiateAbility(awaitingActionQueue[0].abilities[id], awaitingActionQueue[0]);
+        abilityPanel.Show(false);
+        pause = true;
+    }
 
+    internal void PassTurn()
+    {
+        pause = false;
         awaitingActionQueue[0].actionTimer.Reset();
         awaitingActionQueue.RemoveAt(0);
-
-        abilityPanel.Show(false);
     }
 
     private void Update()
     {
         if(characters == null)
+        {
+            return;
+        }
+
+        if(pause == true)
         {
             return;
         }

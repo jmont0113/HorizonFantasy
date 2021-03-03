@@ -1121,7 +1121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3be24b5c60bbd0d4895598e25d673b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encounterList: {fileID: 11400000, guid: 4fcade54bb3e0c2469164fdd9f8f3af2, type: 2}
+  encounterList: {fileID: 11400000, guid: 8f80ac3d271cedf4a81e69d73ded24b2, type: 2}
   enemyGroupPrefab: {fileID: 1919012471076396, guid: 6bc30642bd770b445b8e7b86aa8c9ace,
     type: 3}
 --- !u!1 &382220545
@@ -3103,6 +3103,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rpgpp_lt_bush_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1783979763778466, guid: bd1a894f239d58d4dbf63f27e28096bd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4105805283940168, guid: bd1a894f239d58d4dbf63f27e28096bd, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -4025,7 +4029,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420467801}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.25, z: 0.25}
+  m_LocalPosition: {x: -1, y: 0.25, z: -0.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2071535868}
@@ -5120,6 +5124,7 @@ GameObject:
   - component: {fileID: 1781430898}
   - component: {fileID: 1781430899}
   - component: {fileID: 1781430900}
+  - component: {fileID: 1781430901}
   m_Layer: 0
   m_Name: CombatArena
   m_TagString: Untagged
@@ -5178,7 +5183,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80f00c0334217b54887837d19f062fc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characters: []
+  enemies: []
+  allies: []
   abilityPanel: {fileID: 1688922959}
+  highlightController: {fileID: 1210958932}
+  pause: 0
+--- !u!114 &1781430901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781430897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 811dc666150a5594fb63721481e4fc69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 80
   highlightController: {fileID: 1210958932}
 --- !u!1001 &1791989755
 PrefabInstance:
@@ -7188,22 +7211,11 @@ PrefabInstance:
       propertyPath: character
       value: 
       objectReference: {fileID: 180846967}
-    - target: {fileID: 2262605071446367739, guid: cf55170aed26eab4e82fb7c6b5ce2aa1,
-        type: 3}
-      propertyPath: screenMessage
-      value: 
-      objectReference: {fileID: 2172785408524293548}
     - target: {fileID: 5897267300581272710, guid: cf55170aed26eab4e82fb7c6b5ce2aa1,
         type: 3}
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1620631815}
-    - target: {fileID: 5897267300581272710, guid: cf55170aed26eab4e82fb7c6b5ce2aa1,
-        type: 3}
-      propertyPath: textPrefab
-      value: 
-      objectReference: {fileID: 459542657401293258, guid: d1db9d9abbe1eea4582bdcdd0deb66bf,
-        type: 3}
     - target: {fileID: 8051978983042266827, guid: cf55170aed26eab4e82fb7c6b5ce2aa1,
         type: 3}
       propertyPath: overWorld
@@ -7221,18 +7233,6 @@ PrefabInstance:
       objectReference: {fileID: 1781430899}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf55170aed26eab4e82fb7c6b5ce2aa1, type: 3}
---- !u!114 &2172785408524293548 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5897267300581272710, guid: cf55170aed26eab4e82fb7c6b5ce2aa1,
-    type: 3}
-  m_PrefabInstance: {fileID: 2172785408524293547}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f0f500c9aefb1241936a43ad71effe2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &4381879062898535707
 PrefabInstance:
   m_ObjectHideFlags: 0

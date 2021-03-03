@@ -35,4 +35,4 @@ MonoBehaviour:
   actor: {fileID: 0}
   abilities:
   - {fileID: 11400000, guid: 6e0b6baa5641bc941acfd2aa83ce9a5b, type: 2}
-  entityType: 0
+  entityType: 1

@@ -94,6 +94,7 @@ MonoBehaviour:
   character: {fileID: 0}
   guiManager: {fileID: 2090423868}
   combat: {fileID: 8144390983815133969}
+  screenMessage: {fileID: 5897267300581272710}
 --- !u!114 &1346196016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,3 +204,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f0f500c9aefb1241936a43ad71effe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  textPrefab: {fileID: 459542657401293258, guid: d1db9d9abbe1eea4582bdcdd0deb66bf,
+    type: 3}

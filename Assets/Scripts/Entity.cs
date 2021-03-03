@@ -10,6 +10,7 @@ public class Entity : ScriptableObject
 {
     public enum EntityType
     {
+        None,
         Enemy,
         Character
     }
