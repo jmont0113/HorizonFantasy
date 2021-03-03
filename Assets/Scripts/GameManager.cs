@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
     public GameObject character;
     public GUIManager guiManager;
     public Combat combat;
+    public OnScreenMessage screenMessage;
 
     void SetControlCharacter(GameObject target)
     {

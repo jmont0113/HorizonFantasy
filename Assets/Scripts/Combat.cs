@@ -17,7 +17,7 @@ public class Combat : MonoBehaviour
 
         GameManager.instance.SetControlScheme(ControlScheme.Combat);
         CameraController camera = Camera.main.GetComponent<CameraController>();
-        camera.ChangeTarget(arena.cameraPivot, 0f, 0f);
+        camera.ChangeTarget(arena.cameraPivot, 0f, 0f, true);
 
         List<CombatCharacter> enemies = new List<CombatCharacter>();
         for(int i = 0; i < encounter.enemies.Count; i++)

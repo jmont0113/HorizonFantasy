@@ -19,10 +19,15 @@ public class CameraController : MonoBehaviour
         transform.position = Vector3.SmoothDamp(transform.position, newPos, ref velocity, cameraSmooth);
     }
 
-    internal void ChangeTarget(Transform _target, float _distance, float _smooth)
+    internal void ChangeTarget(Transform _target, float _distance, 
+        float _smooth, bool _inheritRotation = false)
     {
         target = _target;
         distance = _distance;
         cameraSmooth = _smooth;
+        if(_inheritRotation == true)
+        {
+            //transform.rotation = _target.rotation;
+        }
     }
 }
