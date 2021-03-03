@@ -79,11 +79,12 @@ public class AbilityController : MonoBehaviour
         }
         if (targets.Count > 0)
         {
-            if(Input.GetMouseButtonDown(0))
+            highlightController.Hide();
+            highlightController.Highlight(targets);
+            if (Input.GetMouseButtonDown(0))
             {
                 Execute();
             }
-            highlightController.Highlight(targets);
         }
 
         if(Input.GetMouseButtonDown(1))
