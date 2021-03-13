@@ -211,7 +211,7 @@ public class Character : MonoBehaviour
                     FormulaFloat formula = (FormulaFloat)valueReference.valueBase.formula;
                     statsContainer.Sum(valueReference.valueBase, formula.Calculate(statsContainer));
                 }
-                List<Value> references = valueReference.valueBase.formula.GetReferences();
+                List<Value> references = valueReference.valueBase.formula.GetRefereneces();
                 for (int i = 0; i < references.Count; i++)
                 {
                     statsContainer.Subscribe(ValueRecalculate, valueReference.valueBase, references[i]);
@@ -236,5 +236,11 @@ public class Character : MonoBehaviour
             statsContainer.Sum(valueReference.valueBase, formula.Calculate(statsContainer));
         }
 
+    }
+
+    FormulaInt damageFormula;
+    internal void TakeDamage(int damage)
+    {
+        damageFormula.Apply(statsContainer, damage);
     }
 }

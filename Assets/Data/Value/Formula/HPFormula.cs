@@ -21,6 +21,12 @@ public class HPFormula : FormulaInt
         return vit * 6 + str * 2 + 30; //or you can store it into variable and return, that is up to you.
     }
 
+    public override List<Value> GetRefereneces()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    /*
     public override List<Value> GetReferences()
     {
         List<Value> values = new List<Value>();
@@ -28,4 +34,6 @@ public class HPFormula : FormulaInt
         values.Add(strength);
         return values;
     }
+    */
+
 }

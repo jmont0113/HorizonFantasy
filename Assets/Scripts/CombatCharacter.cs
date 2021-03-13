@@ -25,6 +25,13 @@ public class CombatCharacter : MonoBehaviour
         abilities = new List<Ability>(character.abilities);
     }
 
+    internal void TakeDamage(int damage)
+    {
+        //implement all possible situational conditions specific for combat, here.
+        
+        character.TakeDamage(damage);
+    }
+
     public void Tick(float _tick)
     {
         actionTimer.Tick(_tick);

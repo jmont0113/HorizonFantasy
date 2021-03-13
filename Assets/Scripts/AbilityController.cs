@@ -106,6 +106,7 @@ public class AbilityController : MonoBehaviour
 
     void Execute()
     {
+        ability.Activate(caster, targets);
         Finish(true);
     }
 
