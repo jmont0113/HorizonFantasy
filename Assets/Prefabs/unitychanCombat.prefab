@@ -5876,6 +5876,8 @@ MonoBehaviour:
   actionTimer: {fileID: 0}
   character: {fileID: 0}
   abilities: []
+  dead: 0
+  characterHPValue: {fileID: 11400000, guid: 08c8c5c37180dde43aff481f1b4a724f, type: 2}
 --- !u!114 &3828688119541872684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5891,6 +5893,7 @@ MonoBehaviour:
   entity: {fileID: 0}
   abilities: []
   damageFormula: {fileID: 11400000, guid: a2b6edaf8c6a56d438fc2f86b86bd304, type: 2}
+  healFormula: {fileID: 11400000, guid: 75e596d26a8f07d4da4e8bbf7d9b09a6, type: 2}
 --- !u!114 &3828688119541872687
 MonoBehaviour:
   m_ObjectHideFlags: 0

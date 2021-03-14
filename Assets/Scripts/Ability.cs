@@ -14,6 +14,8 @@ public abstract class Ability : ScriptableObject
 {
     public string Name;
     public SpellTargetArea spellTargetArea;
+    public Value source;
+    public int cost;
 
     abstract public void Activate(CombatCharacter caster, List<CombatCharacter> targets);
     virtual public bool Check(CombatCharacter caster)

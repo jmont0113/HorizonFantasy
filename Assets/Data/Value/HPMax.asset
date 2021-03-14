@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: HPMax
   m_EditorClassIdentifier: 
   Name: HP
-  formula: {fileID: 0}
+  formula: {fileID: 11400000, guid: 719f23a76ed3ff2479db7c26fec0d4c8, type: 2}

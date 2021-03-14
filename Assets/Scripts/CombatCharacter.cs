@@ -8,6 +8,7 @@ public class CombatCharacter : MonoBehaviour
     public ActionTimer actionTimer;
     public Character character;
     public List<Ability> abilities;
+    public bool dead; 
 
     public bool Ready
     {
@@ -23,6 +24,7 @@ public class CombatCharacter : MonoBehaviour
         character = GetComponent<Character>();
         actionTimer.Init();
         abilities = new List<Ability>(character.abilities);
+        character.statsContainer.Subscribe(DeathCheck, characterHPValue);
     }
 
     internal void TakeDamage(int damage)
@@ -30,10 +32,29 @@ public class CombatCharacter : MonoBehaviour
         //implement all possible situational conditions specific for combat, here.
         
         character.TakeDamage(damage);
+        DeathCheck();
+    }
+
+    public Value characterHPValue;
+    void DeathCheck()
+    {
+        int curHp = 0;
+        character.statsContainer.Get(characterHPValue, out curHp);
+        dead = curHp <= 0;
+    }
+
+    internal void Heal(int amount)
+    {
+        character.Heal(amount);
     }
 
     public void Tick(float _tick)
     {
+        if(dead == true)
+        {
+            return;
+        }
+
         actionTimer.Tick(_tick);
     }
 

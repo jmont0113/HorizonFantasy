@@ -66,6 +66,13 @@ public class ValueFloatReference : ValueReference
         onChange?.Invoke();
         base.RecalculateDependencies();
     }
+
+    internal void Set(float v)
+    {
+        value = v;
+        onChange?.Invoke();
+        base.RecalculateDependencies();
+    }
 }
 
 public class ValueIntReference : ValueReference
@@ -104,6 +111,13 @@ public class ValueIntReference : ValueReference
     {
         value -= sum;
         Debug.Log(value);
+        onChange?.Invoke();
+        base.RecalculateDependencies();
+    }
+
+    internal void Set(int v)
+    {
+        value = v;
         onChange?.Invoke();
         base.RecalculateDependencies();
     }

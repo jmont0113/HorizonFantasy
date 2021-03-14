@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14ac716da1023544782ab70a3f90990b, type: 3}
-  m_Name: HPCur
+  m_Script: {fileID: 11500000, guid: 0ed9d6918263f604c8a0cf4ef118bd8c, type: 3}
+  m_Name: HealFormula
   m_EditorClassIdentifier: 
-  Name: HP
-  formula: {fileID: 0}
+  hp: {fileID: 11400000, guid: 08c8c5c37180dde43aff481f1b4a724f, type: 2}
+  maxHp: {fileID: 11400000, guid: 93f05c0b22031c84ba731f5b69b4a850, type: 2}

@@ -245,4 +245,11 @@ public class Character : MonoBehaviour
         damageFormula.Apply(statsContainer, ref damage);
         GameManager.instance.onScreenMessage.ShowMessage(transform.position, damage.ToString());
     }
+
+    [SerializeField] FormulaInt healFormula;
+    internal void Heal(int amount)
+    {
+        healFormula.Apply(statsContainer, ref amount);
+        GameManager.instance.onScreenMessage.ShowMessage(transform.position, amount.ToString());
+    }
 }

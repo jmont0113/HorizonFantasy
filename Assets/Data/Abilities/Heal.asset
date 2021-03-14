@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87dca0aa982a4924fab2a9055f20a60f, type: 3}
-  m_Name: Attack
+  m_Script: {fileID: 11500000, guid: 5a22dba07e096ef4997b51692bddfab7, type: 3}
+  m_Name: Heal
   m_EditorClassIdentifier: 
-  Name: Attack
+  Name: Heal
   spellTargetArea: 0
-  source: {fileID: 11400000, guid: 08c8c5c37180dde43aff481f1b4a724f, type: 2}
+  source: {fileID: 11400000, guid: 5d062ea40d0e60944952abad04396a65, type: 2}
   cost: 10
-  damageFormula: {fileID: 11400000, guid: a2b6edaf8c6a56d438fc2f86b86bd304, type: 2}
+  amount: 100

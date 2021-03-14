@@ -23,17 +23,10 @@ public class HPFormula : FormulaInt
 
     public override List<Value> GetRefereneces()
     {
-        throw new System.NotImplementedException();
-    }
-
-    /*
-    public override List<Value> GetReferences()
-    {
+        //throw new System.NotImplementedException();
         List<Value> values = new List<Value>();
         values.Add(vitality);
         values.Add(strength);
         return values;
     }
-    */
-
 }

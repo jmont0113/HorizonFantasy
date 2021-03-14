@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   copyOf: {fileID: 11400000, guid: 76700b848056d814499bd05c20106d04, type: 2}
   values: []
-  integers: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  integers: c8000000f401000000000000000000000000000000000000000000000000000000000000c8000000f4010000
   floats:
   - 0
 --- !u!114 &11400000
@@ -32,7 +32,7 @@ MonoBehaviour:
   Name: Slime
   model: {fileID: 1919012471076396, guid: ba98e1e56b6836642bbb2cac96d4af8c, type: 3}
   stats: {fileID: -3437916249082410728}
-  actor: {fileID: 0}
+  actor: {fileID: 11400000, guid: d9d8763b459d2bb478f0c8bb7474f972, type: 2}
   abilities:
   - {fileID: 11400000, guid: 6e0b6baa5641bc941acfd2aa83ce9a5b, type: 2}
   entityType: 1

@@ -20,6 +20,17 @@ public class AbilityController : MonoBehaviour
 
     public void InitiateAbility(Ability _ability, CombatCharacter _caster)
     {
+        if(_ability.source != null)
+        {
+            //*TODO* Create and sent message that your character can't afford to cast this ability
+            ValueIntReference source =
+                (ValueIntReference)_caster.character.statsContainer.GetValueReference(_ability.source);
+            if(source.value <= _ability.cost)
+            {
+                return;
+            }
+        }
+
         ability = _ability;
         selectTarget = true;
         caster = _caster;
@@ -76,6 +87,8 @@ public class AbilityController : MonoBehaviour
                     targets.Add(caster);
                     break;
             }
+            //this will remove everyone who is dead from the list
+            targets.RemoveAll(x => x.dead == true);
         }
         if (targets.Count > 0)
         {
@@ -107,6 +120,12 @@ public class AbilityController : MonoBehaviour
     void Execute()
     {
         ability.Activate(caster, targets);
+
+        if (ability.source != null)
+        {
+            caster.character.statsContainer.Subtract(ability.source, ability.cost);
+        }
+
         Finish(true);
     }
 

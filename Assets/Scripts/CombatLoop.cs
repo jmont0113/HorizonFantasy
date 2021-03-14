@@ -50,13 +50,15 @@ public class CombatLoop : MonoBehaviour
             + " casts: "
             + awaitingActionQueue[0].abilities[id].Name;
         Debug.Log(str);
-        GameManager.instance.onScreenMessage.ShowMessage(
-            awaitingActionQueue[0].character.transform.position,
-            str
-            );
-        abilityController.InitiateAbility(awaitingActionQueue[0].abilities[id], awaitingActionQueue[0]);
+        GameManager.instance.onScreenMessage.ShowMessage(awaitingActionQueue[0].character.transform.position,str);
+       /* Debug.Log(awaitingActionQueue[0].character.entity.Name
+            + " casts: "
+            + awaitingActionQueue[0].abilities[id].Name);
+       */
         abilityPanel.Show(false);
         pause = true;
+
+        abilityController.InitiateAbility(awaitingActionQueue[0].abilities[id], awaitingActionQueue[0]);
     }
 
     internal void PassTurn()
@@ -77,6 +79,8 @@ public class CombatLoop : MonoBehaviour
         {
             return;
         }
+
+        CheckCombatCondition();
 
         if(awaitingActionQueue.Count > 0)
         {
@@ -103,5 +107,43 @@ public class CombatLoop : MonoBehaviour
 
             c.Tick(tick);
         }
+    }
+
+    private void CheckCombatCondition()
+    {
+        if (CheckLoseCondition())
+        {
+            Debug.Log("You lost the battle");
+        }
+        if(CheckWinCondition())
+        {
+            Debug.Log("You won the battle");
+        }
+    }
+
+    bool CheckLoseCondition()
+    {
+        for(int i = 0; i < allies.Count; i++)
+        {
+            if(allies[i].dead == false)
+            {
+                //if someone out of allies is alive that means you still did not lost the battle
+                return false;
+            }
+        }
+        return true;
+    }
+
+    bool CheckWinCondition()
+    {
+        for (int i = 0; i < enemies.Count; i++)
+        {
+            if (enemies[i].dead == false)
+            {
+                //if someone out of enemies is alive that means you still did not won the battle
+                return false;
+            }
+        }
+        return true;
     }
 }
