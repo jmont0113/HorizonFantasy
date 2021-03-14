@@ -4,23 +4,17 @@ using UnityEngine;
 
 public abstract class Formula : ScriptableObject
 {
-    public abstract List<Value> GetRefereneces();
+    public virtual List<Value> GetRefereneces() { return null; }
 }
 
 public abstract class FormulaInt : Formula
 {
-    public abstract int Calculate(StatsContainer stats);
-    public virtual void Apply(StatsContainer statsContainer, int amount)
-    {
-
-    }
+    public virtual int Calculate(StatsContainer stats) { return 0; }
+    public virtual void Apply(StatsContainer statsContainer, ref int amount) { }
 }
 
 public abstract class FormulaFloat : Formula
 {
-    public abstract float Calculate(StatsContainer stulaats);
-    public virtual void Apply(StatsContainer statsContainer, float amount)
-    {
-
-    }
+    public virtual float Calculate(StatsContainer stulaats) { return 0; }
+    public virtual void Apply(StatsContainer statsContainer, ref float amount) { }
 }

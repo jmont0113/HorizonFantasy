@@ -238,9 +238,11 @@ public class Character : MonoBehaviour
 
     }
 
-    FormulaInt damageFormula;
+    
+    [SerializeField] FormulaInt damageFormula;
     internal void TakeDamage(int damage)
     {
-        damageFormula.Apply(statsContainer, damage);
+        damageFormula.Apply(statsContainer, ref damage);
+        GameManager.instance.onScreenMessage.ShowMessage(transform.position, damage.ToString());
     }
 }

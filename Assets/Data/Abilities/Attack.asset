@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Attack
   spellTargetArea: 1
+  damageFormula: {fileID: 11400000, guid: a2b6edaf8c6a56d438fc2f86b86bd304, type: 2}

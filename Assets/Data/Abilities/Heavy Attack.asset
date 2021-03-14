@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Heavy Attack
   m_EditorClassIdentifier: 
   Name: Heavy Attack
+  spellTargetArea: 0
+  damageFormula: {fileID: 11400000, guid: a2b6edaf8c6a56d438fc2f86b86bd304, type: 2}

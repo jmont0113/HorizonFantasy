@@ -45,7 +45,7 @@ public class ActionTimer : MonoBehaviour
         }
     }
 
-    internal void Reset()
+    internal void ResetTimer()
     {
         currentAT.value = 0f;
     }

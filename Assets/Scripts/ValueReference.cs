@@ -103,6 +103,7 @@ public class ValueIntReference : ValueReference
     internal void Subtract(int sum)
     {
         value -= sum;
+        Debug.Log(value);
         onChange?.Invoke();
         base.RecalculateDependencies();
     }

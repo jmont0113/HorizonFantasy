@@ -32,10 +32,10 @@ public class GameManager : MonoBehaviour
     public CharacterControl characterControl;
     public InventoryControl inventoryControl;
     public DialogueControl dialogueControl;
+    public OnScreenMessage onScreenMessage;
     public GameObject character;
     public GUIManager guiManager;
     public Combat combat;
-    public OnScreenMessage screenMessage;
 
     void SetControlCharacter(GameObject target)
     {

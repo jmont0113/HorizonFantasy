@@ -50,7 +50,7 @@ public class CombatLoop : MonoBehaviour
             + " casts: "
             + awaitingActionQueue[0].abilities[id].Name;
         Debug.Log(str);
-        GameManager.instance.screenMessage.ShowMessage(
+        GameManager.instance.onScreenMessage.ShowMessage(
             awaitingActionQueue[0].character.transform.position,
             str
             );
@@ -62,7 +62,7 @@ public class CombatLoop : MonoBehaviour
     internal void PassTurn()
     {
         pause = false;
-        awaitingActionQueue[0].actionTimer.Reset();
+        awaitingActionQueue[0].actionTimer.ResetTimer();
         awaitingActionQueue.RemoveAt(0);
     }
 

@@ -5,12 +5,13 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Ability/Base/Attack")]
 public class Attack : Ability
 {
-    [SerializeField] int damage = 100;
+    [SerializeField] FormulaInt damageFormula;
 
     public override void Activate(CombatCharacter caster, List<CombatCharacter> targets)
     {
         foreach(CombatCharacter c in targets)
         {
+            int damage = damageFormula.Calculate(caster.character.statsContainer);
             c.TakeDamage(damage);
         }
     }

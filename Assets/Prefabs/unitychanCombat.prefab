@@ -5874,6 +5874,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionTimer: {fileID: 0}
+  character: {fileID: 0}
+  abilities: []
 --- !u!114 &3828688119541872684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5886,6 +5888,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e02aa68abae463043af5f54bf5c8857b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  entity: {fileID: 0}
+  abilities: []
+  damageFormula: {fileID: 11400000, guid: a2b6edaf8c6a56d438fc2f86b86bd304, type: 2}
 --- !u!114 &3828688119541872687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5911,9 +5916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc7273e7f70d5c478d0390eee08cd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: {fileID: 11400000, guid: 63614f681d15d7e4bbfdf94212b366eb, type: 2}
   targetAT: 5
-  myBar: {fileID: 0}
 --- !u!1 &3828688119541841871
 GameObject:
   m_ObjectHideFlags: 0
