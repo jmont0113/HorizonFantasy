@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     public GUIManager guiManager;
     public Combat combat;
     public GameOverManager gameOverManager;
+    public Transform cameraCharacterPivot;
 
     void SetControlCharacter(GameObject target)
     {

@@ -3734,6 +3734,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1164952811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1164952812}
+  m_Layer: 0
+  m_Name: CorrectCameraPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1164952812
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164952811}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2138362982}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1210958932 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1210958932, guid: cf55170aed26eab4e82fb7c6b5ce2aa1,
@@ -6938,44 +6968,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1932580871, guid: 40046bae76ac54bffb59f14f47d9ba1b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.286629
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932580871, guid: 40046bae76ac54bffb59f14f47d9ba1b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.4881566
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932580871, guid: 40046bae76ac54bffb59f14f47d9ba1b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -35.6566
+      objectReference: {fileID: 0}
     - target: {fileID: 5767730237623648919, guid: 40046bae76ac54bffb59f14f47d9ba1b,
         type: 3}
       propertyPath: objectContainer
       value: 
       objectReference: {fileID: 929317945}
-    - target: {fileID: 5767730237623648919, guid: 40046bae76ac54bffb59f14f47d9ba1b,
-        type: 3}
-      propertyPath: members.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5767730237623648919, guid: 40046bae76ac54bffb59f14f47d9ba1b,
-        type: 3}
-      propertyPath: onStart.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5767730237623648919, guid: 40046bae76ac54bffb59f14f47d9ba1b,
-        type: 3}
-      propertyPath: members.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5767730237623648919, guid: 40046bae76ac54bffb59f14f47d9ba1b,
-        type: 3}
-      propertyPath: onStart.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 6d903f3c7b92b9042845000ca0450990,
-        type: 2}
-    - target: {fileID: 5767730237623648919, guid: 40046bae76ac54bffb59f14f47d9ba1b,
-        type: 3}
-      propertyPath: onStart.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 35bc3c38788eb58498c16bc108ac5da2,
-        type: 2}
-    - target: {fileID: 5767730237623648919, guid: 40046bae76ac54bffb59f14f47d9ba1b,
-        type: 3}
-      propertyPath: onStart.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 065fd868677a950448173480b1be9f2a,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40046bae76ac54bffb59f14f47d9ba1b, type: 3}
 --- !u!4 &2028633792 stripped
@@ -7437,7 +7446,8 @@ Transform:
   m_LocalRotation: {x: 0.23911765, y: 0.3696438, z: -0.09904577, w: 0.89239913}
   m_LocalPosition: {x: -3.24, y: 4.83, z: -37.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1164952812}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 30, y: 45, z: 0}
@@ -8210,6 +8220,11 @@ PrefabInstance:
       propertyPath: onScreenMessage
       value: 
       objectReference: {fileID: 1564712782}
+    - target: {fileID: 2262605071446367739, guid: cf55170aed26eab4e82fb7c6b5ce2aa1,
+        type: 3}
+      propertyPath: cameraCharacterPivot
+      value: 
+      objectReference: {fileID: 1164952812}
     - target: {fileID: 5897267300581272710, guid: cf55170aed26eab4e82fb7c6b5ce2aa1,
         type: 3}
       propertyPath: canvas
