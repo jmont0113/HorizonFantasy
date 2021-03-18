@@ -8,7 +8,8 @@ public class CombatCharacter : MonoBehaviour
     public ActionTimer actionTimer;
     public Character character;
     public List<Ability> abilities;
-    public bool dead; 
+    public bool dead;
+    public Animator animator;
 
     public bool Ready
     {
@@ -20,6 +21,11 @@ public class CombatCharacter : MonoBehaviour
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
+        if(animator == null)
+        {
+            animator = transform.GetChild(0).GetComponent<Animator>();
+        }
         actionTimer = GetComponent<ActionTimer>();
         character = GetComponent<Character>();
         actionTimer.Init();
@@ -41,6 +47,10 @@ public class CombatCharacter : MonoBehaviour
         int curHp = 0;
         character.statsContainer.Get(characterHPValue, out curHp);
         dead = curHp <= 0;
+        if(dead)
+        {
+            animator.Play("Dead");
+        }
     }
 
     internal void Heal(int amount)
@@ -62,5 +72,10 @@ public class CombatCharacter : MonoBehaviour
     internal float GetFillAmount(Value trackValue)
     {
         return actionTimer.GetFillAmount(trackValue);
+    }
+
+    internal void Play(string animationName)
+    {
+        animator.Play(animationName);
     }
 }

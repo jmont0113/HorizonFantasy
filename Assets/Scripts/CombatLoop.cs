@@ -13,6 +13,7 @@ public class CombatLoop : MonoBehaviour
     [SerializeField] HighlightController highlightController;
     public bool pause;
     AbilityController abilityController;
+    [SerializeField] GameObject winCanvas;
 
     private void Start()
     {
@@ -22,6 +23,8 @@ public class CombatLoop : MonoBehaviour
 
     public void Init(Party _party, List<CombatCharacter> _enemies)
     {
+        pause = false;
+
         characters = new List<CombatCharacter>();
         allies = new List<CombatCharacter>();
         foreach(CombatCharacter character in _party.members)
@@ -50,11 +53,15 @@ public class CombatLoop : MonoBehaviour
             + " casts: "
             + awaitingActionQueue[0].abilities[id].Name;
         Debug.Log(str);
-        GameManager.instance.onScreenMessage.ShowMessage(awaitingActionQueue[0].character.transform.position,str);
-       /* Debug.Log(awaitingActionQueue[0].character.entity.Name
+        /*GameManager.instance.onScreenMessage.ShowMessage(
+           awaitingActionQueue[0].character.transform.position,
+            str
+            );
+        Debug.Log(awaitingActionQueue[0].character.entity.Name
             + " casts: "
             + awaitingActionQueue[0].abilities[id].Name);
-       */
+        */
+
         abilityPanel.Show(false);
         pause = true;
 
@@ -113,12 +120,21 @@ public class CombatLoop : MonoBehaviour
     {
         if (CheckLoseCondition())
         {
+            GameManager.instance.gameOverManager.GameOver();
             Debug.Log("You lost the battle");
+            pause = true;
         }
         if(CheckWinCondition())
         {
+            WinCombat();
             Debug.Log("You won the battle");
+            pause = true;
         }
+    }
+
+    private void WinCombat()
+    {
+        winCanvas.SetActive(true);
     }
 
     bool CheckLoseCondition()

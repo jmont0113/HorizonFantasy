@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: IceBolt
   m_EditorClassIdentifier: 
   Name: Ice Bolt
+  spellTargetArea: 0
+  source: {fileID: 11400000, guid: bcc0f9d561b0d83498b0ee47fd9ff6b3, type: 2}
+  cost: 100

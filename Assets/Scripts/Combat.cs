@@ -8,6 +8,7 @@ public class Combat : MonoBehaviour
     [SerializeField] CombatLoop combatLoop;
     [SerializeField] SceneManage sceneManage;
     [SerializeField] GameObject enemyPrefab;
+    GameObject enemyGroup;
 
     public void InitiateCombat(EnemyEncounter encounter, Party party, CombatArena arena = null)
     {
@@ -23,15 +24,16 @@ public class Combat : MonoBehaviour
         List<CombatCharacter> enemies = new List<CombatCharacter>();
         for(int i = 0; i < encounter.enemies.Count; i++)
         {
-            GameObject enemy = Instantiate(enemyPrefab, 
-                arena.enemySpawnPoints[i].position, 
-                Quaternion.Euler(0f, 180f, 0f));
-
             //Quaternion.Euler(0f, 180f, 0f) or Quaternion.identity
+            GameObject enemy = Instantiate(enemyPrefab, 
+                arena.enemySpawnPoints[i].position,
+                arena.enemySpawnPoints[i].rotation);
 
             GameObject go = Instantiate(encounter.enemies[i].model, 
-                arena.enemySpawnPoints[i].position, 
-                Quaternion.Euler(0f, 180f, 0f));
+                arena.enemySpawnPoints[i].position,
+                arena.enemySpawnPoints[i].rotation);
+
+            go.transform.SetParent(enemy.transform);
 
             enemies.Add(enemy.GetComponent<CombatCharacter>());
             Character character = enemy.GetComponent<Character>();
@@ -45,5 +47,35 @@ public class Combat : MonoBehaviour
 
         sceneManage.Set(false);
         combatLoop.Init(party, enemies);
+    }
+
+    public void SetEnemyGroup(GameObject enemyGroup)
+    {
+        this.enemyGroup = enemyGroup;
+    }
+
+    public void ExitCombat()
+    {
+        for(int i = 0; i < combatLoop.enemies.Count; i++)
+        {
+            Destroy(combatLoop.enemies[i].gameObject);
+        }
+
+        GameManager.instance.SetControlScheme(ControlScheme.Exploration);
+
+        CameraController camera = Camera.main.GetComponent<CameraController>();
+        camera.ChangeTarget(GameManager.instance.character.transform, 7f, 0.2f, true);
+
+        combatLoop.enemies = null;
+        combatLoop.allies = null;
+        combatLoop.characters = null;
+
+        sceneManage.Set(true);
+
+        if(enemyGroup != null)
+        {
+            Destroy(enemyGroup);
+            enemyGroup = null;
+        }
     }
 }

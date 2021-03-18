@@ -120,6 +120,7 @@ public class AbilityController : MonoBehaviour
     void Execute()
     {
         ability.Activate(caster, targets);
+        caster.Play(ability.animationName);
 
         if (ability.source != null)
         {

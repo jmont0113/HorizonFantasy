@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Retreat
   spellTargetArea: 3
+  source: {fileID: 11400000, guid: e4c0f73b48d84d549aa8cbf24f7f9a57, type: 2}
+  cost: 50

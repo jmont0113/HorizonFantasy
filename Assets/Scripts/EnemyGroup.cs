@@ -83,6 +83,7 @@ public class EnemyGroup : MonoBehaviour
         if(party != null)
         {
             GameManager.instance.combat.InitiateCombat(encounter, party);
+            GameManager.instance.combat.SetEnemyGroup(gameObject);
         }
     }
 }

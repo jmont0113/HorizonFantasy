@@ -16,6 +16,7 @@ public abstract class Ability : ScriptableObject
     public SpellTargetArea spellTargetArea;
     public Value source;
     public int cost;
+    public string animationName = "Attack";
 
     abstract public void Activate(CombatCharacter caster, List<CombatCharacter> targets);
     virtual public bool Check(CombatCharacter caster)

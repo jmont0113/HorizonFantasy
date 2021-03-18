@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 680999c4935565f4ba3bf4f7fee0ccc1, type: 3}
   m_Name: PhysicalDamage
   m_EditorClassIdentifier: 
-  str: {fileID: 0}
-  maxFlatDamage: 0
+  str: {fileID: 11400000, guid: bcc0f9d561b0d83498b0ee47fd9ff6b3, type: 2}
+  maxFlatDamage: 200
   hp: {fileID: 11400000, guid: 08c8c5c37180dde43aff481f1b4a724f, type: 2}
   defense: {fileID: 11400000, guid: 5401e2d5356914f459f857c9be04f0f6, type: 2}

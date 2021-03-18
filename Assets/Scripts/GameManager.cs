@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     public GameObject character;
     public GUIManager guiManager;
     public Combat combat;
+    public GameOverManager gameOverManager;
 
     void SetControlCharacter(GameObject target)
     {
