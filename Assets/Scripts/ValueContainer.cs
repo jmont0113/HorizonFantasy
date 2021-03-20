@@ -13,35 +13,25 @@ public class ValueContainer : ValueStructure
     {
         copyOf = statsStructure;
 
-        integers = new int[copyOf.values.FindAll(x => x.GetType() == typeof(ValueInt)).Count];
-        floats = new float[copyOf.values.FindAll(x => x.GetType() == typeof(ValueFloat)).Count];
+        integers = new int[copyOf.Values.FindAll(x => x.GetType() == typeof(ValueInt)).Count];
+        floats = new float[copyOf.Values.FindAll(x => x.GetType() == typeof(ValueFloat)).Count];
     }
 
-    internal void Copy(ref StatsContainer statsContainer)
+    public override void Copy(ref StatsContainer container)
     {
         int intIndex = 0;
         int floatIndex = 0;
 
-        List<Value> values;
-        if(copyOf != null)
+        for (int i = 0; i < Values.Count; i++)
         {
-            values = copyOf.values;
-        }
-        else
-        {
-            values = this.values;
-        }
-
-        for(int i = 0; i < values.Count; i++)
-        {
-            if(values[i] is ValueFloat)
+            if (Values[i] is ValueFloat)
             {
-                statsContainer.valueList.Add(new ValueFloatReference(values[i], floats[floatIndex]));
+                container.Sum(Values[i], floats[floatIndex]);
                 floatIndex++;
             }
-            if(values[i] is ValueInt)
+            if (Values[i] is ValueInt)
             {
-                statsContainer.valueList.Add(new ValueIntReference(values[i], integers[intIndex]));
+                container.Sum(Values[i], integers[intIndex]);
                 intIndex++;
             }
         }

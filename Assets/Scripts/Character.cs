@@ -36,16 +36,16 @@ public class StatsContainer
     {
         int integerIndex = 0;
         int floatIndex = 0; 
-        for(int i = 0; i < stats.values.Count; i++)
+        for(int i = 0; i < stats.Values.Count; i++)
         {
-            if(stats.values[i].GetType() == typeof(ValueFloat))
+            if(stats.Values[i].GetType() == typeof(ValueFloat))
             {
-                Sum(stats.values[i], stats.floats[floatIndex]);
+                Sum(stats.Values[i], stats.floats[floatIndex]);
                 floatIndex++;
             }
             else
             {
-                Sum(stats.values[i], stats.integers[integerIndex]);
+                Sum(stats.Values[i], stats.integers[integerIndex]);
                 integerIndex++;
             }
         }
@@ -75,16 +75,16 @@ public class StatsContainer
     {
         int integerIndex = 0;
         int floatIndex = 0;
-        for (int i = 0; i < stats.values.Count; i++)
+        for (int i = 0; i < stats.Values.Count; i++)
         {
-            if (stats.values[i].GetType() == typeof(ValueFloat))
+            if (stats.Values[i].GetType() == typeof(ValueFloat))
             {
-                Subtract(stats.values[i], stats.floats[floatIndex]);
+                Subtract(stats.Values[i], stats.floats[floatIndex]);
                 floatIndex++;
             }
             else
             {
-                Subtract(stats.values[i], stats.integers[integerIndex]);
+                Subtract(stats.Values[i], stats.integers[integerIndex]);
                 integerIndex++;
             }
         }

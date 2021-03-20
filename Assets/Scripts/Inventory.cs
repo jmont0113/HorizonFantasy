@@ -26,8 +26,7 @@ public class Inventory : MonoBehaviour
         get { return inventory.Count; }
     }
 
-    //void Awake
-    void Start()
+    void Awake()
     {
         inventory = new List<ItemInstance>();
         for (int i = 0; i < itemOnStart.Count; i++)

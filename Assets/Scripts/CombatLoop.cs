@@ -142,6 +142,8 @@ public class CombatLoop : MonoBehaviour
             totalReward.Sum(enemies[i].character.entity.reward.rewards);
         }
 
+        GameManager.instance.currencies.Sum(totalReward);
+
         winCanvasController.Set(totalReward);
 
         winCanvas.SetActive(true);

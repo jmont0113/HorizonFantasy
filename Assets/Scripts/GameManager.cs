@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
     public Combat combat;
     public GameOverManager gameOverManager;
     public Transform cameraCharacterPivot;
+    public Currencies currencies;
 
     void SetControlCharacter(GameObject target)
     {
