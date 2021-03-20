@@ -14,6 +14,7 @@ public class CombatLoop : MonoBehaviour
     public bool pause;
     AbilityController abilityController;
     [SerializeField] GameObject winCanvas;
+    [SerializeField] WinConditionCanvasController winCanvasController;
 
     private void Start()
     {
@@ -132,8 +133,17 @@ public class CombatLoop : MonoBehaviour
         }
     }
 
-    private void WinCombat()
+    public void WinCombat()
     {
+        StatsContainer totalReward = new StatsContainer();
+
+        for(int i = 0; i < enemies.Count; i++)
+        {
+            totalReward.Sum(enemies[i].character.entity.reward.rewards);
+        }
+
+        winCanvasController.Set(totalReward);
+
         winCanvas.SetActive(true);
     }
 

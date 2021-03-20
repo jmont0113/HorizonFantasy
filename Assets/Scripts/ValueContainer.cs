@@ -13,7 +13,7 @@ public class ValueContainer : ValueStructure
     {
         copyOf = statsStructure;
 
-        integers = new int[copyOf.values.FindAll(x =>x.GetType() == typeof(ValueInt)).Count];
+        integers = new int[copyOf.values.FindAll(x => x.GetType() == typeof(ValueInt)).Count];
         floats = new float[copyOf.values.FindAll(x => x.GetType() == typeof(ValueFloat)).Count];
     }
 

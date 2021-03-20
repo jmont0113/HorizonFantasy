@@ -43,13 +43,13 @@ public class CameraController : MonoBehaviour
     {
         if(prebake == false)
         {
-            //transform.position = worldPosition;
+            transform.position = worldPosition;
         }
         else
         {
-            //Vector3 newPos = target.transform.position + transform.forward * -distance;
+            Vector3 newPos = target.transform.position + transform.forward * -distance;
 
-            //transform.position = newPos;
+            transform.position = newPos;
         }
     }
 }

@@ -33,6 +33,41 @@ MonoBehaviour:
   model: {fileID: 1919012471076396, guid: ba98e1e56b6836642bbb2cac96d4af8c, type: 3}
   stats: {fileID: -3437916249082410728}
   actor: {fileID: 11400000, guid: d9d8763b459d2bb478f0c8bb7474f972, type: 2}
+  reward: {fileID: 6906625671867991004}
   abilities:
   - {fileID: 11400000, guid: 6e0b6baa5641bc941acfd2aa83ce9a5b, type: 2}
   entityType: 1
+--- !u!114 &2773290092618425125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ccd9c72c8d9fdd4f882f9e67bb8907e, type: 3}
+  m_Name: Reward Values
+  m_EditorClassIdentifier: 
+  copyOf: {fileID: 11400000, guid: e4ad0a898936baa4a824d744e11ec4df, type: 2}
+  values:
+  - {fileID: 11400000, guid: a50b364edd9d6c243afa1a88548e16d8, type: 2}
+  - {fileID: 11400000, guid: 5767e5aa4c296944f9ef61eb57a2b0c5, type: 2}
+  integers: 640000006400000064000000
+  floats: []
+--- !u!114 &6906625671867991004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853214930b57e1c4ea3b9ae4d85ec9be, type: 3}
+  m_Name: Reward
+  m_EditorClassIdentifier: 
+  rewards: {fileID: 2773290092618425125}
+  itemsToDrop:
+  - {fileID: 11400000, guid: e8cea31f7e9996d4eb92dabaa108d1ab, type: 2}
+  - {fileID: 11400000, guid: 4f18b35c3aeba0f47830e270b8332c5b, type: 2}

@@ -19,6 +19,7 @@ public class Entity : ScriptableObject
     public GameObject model;
     public ValueContainer stats;
     public Actor actor;
+    public RewardContainer reward;
     public List<Ability> abilities;
     [ReadOnly] public EntityType entityType;
 
@@ -33,6 +34,31 @@ public class Entity : ScriptableObject
 
                     ValueStructure statsStructure = (ValueStructure)AssetDatabase.LoadAssetAtPath("Assets/Data/Base/CharacterStats.asset", typeof(ValueStructure));
                     stats.Form(statsStructure);
+                }
+
+                if(reward == null)
+                {
+                    reward = (RewardContainer)Embed(this, typeof(RewardContainer), "Reward");
+                    reward.rewards = (ValueContainer)Embed(
+                        this, 
+                        typeof(ValueContainer), 
+                        "Reward Values"
+                        );
+
+                    ValueStructure rewardsStructure = (ValueStructure)AssetDatabase.LoadAssetAtPath(
+                        "Assets/Data/Base/Rewards.asset",
+                        typeof(ValueStructure)
+                        );
+                    reward.rewards.Form(rewardsStructure);
+                }
+
+                if(reward.rewards.copyOf == null)
+                {
+                    ValueStructure rewardsStructure = (ValueStructure)AssetDatabase.LoadAssetAtPath(
+                        "Assets/Data/Base/Rewards.asset",
+                        typeof(ValueStructure)
+                        );
+                    reward.rewards.Form(rewardsStructure);
                 }
 
                 break;
@@ -71,6 +97,15 @@ public class Entity : ScriptableObject
     {
         Entity e = CreateEntity(GetPath() + "/Enemy.asset");
         e.entityType = EntityType.Enemy;
+
+        e.reward = (RewardContainer)Embed(e, typeof(RewardContainer), "Reward");
+        e.reward.rewards = (ValueContainer)Embed(e, typeof(ValueContainer), "Reward Values");
+        
+        ValueStructure rewardsStructure = (ValueStructure)AssetDatabase.LoadAssetAtPath(
+            "Assets/Data/Base/Rewards.asset",
+            typeof(ValueStructure)
+            );
+        e.reward.rewards.Form(rewardsStructure);
     }
     
     [MenuItem("Assets/Create/Data/Character")]
@@ -83,7 +118,7 @@ public class Entity : ScriptableObject
         e.actor = (Actor)Embed(e, typeof(Actor), "Actor");
     }
     
-    private static ScriptableObject Embed(Entity e, Type type, string n)
+    private static ScriptableObject Embed(UnityEngine.Object e, Type type, string n)
     {
         ScriptableObject so = CreateInstance(type);
         AssetDatabase.AddObjectToAsset(so, e);

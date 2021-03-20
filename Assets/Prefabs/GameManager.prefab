@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 8051978983042266827}
   - component: {fileID: 1210958932}
   - component: {fileID: 5897267300581272710}
+  - component: {fileID: 663669146}
   m_Layer: 5
   m_Name: GameManager
   m_TagString: Untagged
@@ -91,10 +92,12 @@ MonoBehaviour:
   characterControl: {fileID: 1346196016}
   inventoryControl: {fileID: 2090423869}
   dialogueControl: {fileID: 1639050293742433824}
+  onScreenMessage: {fileID: 5897267300581272710}
   character: {fileID: 0}
   guiManager: {fileID: 2090423868}
   combat: {fileID: 8144390983815133969}
-  screenMessage: {fileID: 5897267300581272710}
+  gameOverManager: {fileID: 663669146}
+  cameraCharacterPivot: {fileID: 0}
 --- !u!114 &1346196016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,6 +167,8 @@ MonoBehaviour:
   defaultArena: {fileID: 0}
   combatLoop: {fileID: 0}
   sceneManage: {fileID: 8051978983042266827}
+  enemyPrefab: {fileID: 6622502725881744617, guid: 075b49972a9e1df49a2bdaf1be2ac200,
+    type: 3}
 --- !u!114 &8051978983042266827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,3 +212,16 @@ MonoBehaviour:
   canvas: {fileID: 0}
   textPrefab: {fileID: 459542657401293258, guid: d1db9d9abbe1eea4582bdcdd0deb66bf,
     type: 3}
+--- !u!114 &663669146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2172785407904840605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c72ee9361af879e469f5d9b41c1a08d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
