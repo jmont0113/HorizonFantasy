@@ -252,4 +252,9 @@ public class Character : MonoBehaviour
         healFormula.Apply(statsContainer, ref amount);
         GameManager.instance.onScreenMessage.ShowMessage(transform.position, amount.ToString());
     }
+
+    internal void LevelUP()
+    {
+        statsContainer.Sum(entity.statsGrowth);
+    }
 }

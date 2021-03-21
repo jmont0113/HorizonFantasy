@@ -5819,6 +5819,7 @@ GameObject:
   - component: {fileID: 3828688119541872684}
   - component: {fileID: 3828688119541872687}
   - component: {fileID: 3828688119541872672}
+  - component: {fileID: 1308771439328790068}
   m_Layer: 0
   m_Name: unitychanCombat
   m_TagString: Untagged
@@ -5877,6 +5878,7 @@ MonoBehaviour:
   character: {fileID: 0}
   abilities: []
   dead: 0
+  animator: {fileID: 0}
   characterHPValue: {fileID: 11400000, guid: 08c8c5c37180dde43aff481f1b4a724f, type: 2}
 --- !u!114 &3828688119541872684
 MonoBehaviour:
@@ -5920,6 +5922,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetAT: 5
+--- !u!114 &1308771439328790068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3828688119541841869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3b93d102ce22c4b9e02d7d18fef6bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valueStructure: {fileID: 11400000, guid: 9e93de25201a54c45aed7f9c640531f7, type: 2}
+  expValue: {fileID: 11400000, guid: a50b364edd9d6c243afa1a88548e16d8, type: 2}
+  levelValue: {fileID: 11400000, guid: bf7651caa709afb4cb13a2e8bdd25877, type: 2}
+  expFormula: {fileID: 11400000, guid: e3bea75b2e77f77429b56e1079dc9cf4, type: 2}
 --- !u!1 &3828688119541841871
 GameObject:
   m_ObjectHideFlags: 0

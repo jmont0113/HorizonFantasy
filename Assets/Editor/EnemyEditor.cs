@@ -7,10 +7,19 @@ using UnityEngine;
 public class EnemyEditor : Editor
 {
     Editor valueEditor;
+    Editor growthEditor;
 
     private void OnEnable()
     {
-        valueEditor = CreateEditor(serializedObject.FindProperty("stats").objectReferenceValue, typeof(ValueContainerEditor));
+        valueEditor = CreateEditor(
+            serializedObject.FindProperty("stats").objectReferenceValue, 
+            typeof(ValueContainerEditor)
+            );
+
+        growthEditor = CreateEditor(
+            serializedObject.FindProperty("statsGrowth").objectReferenceValue, 
+            typeof(ValueContainerEditor)
+            );
     }
 
     public override void OnInspectorGUI()
@@ -22,7 +31,19 @@ public class EnemyEditor : Editor
         valueEditor = CreateEditor(serializedObject.FindProperty("stats").objectReferenceValue, typeof(ValueContainerEditor));
         if (valueEditor != null)
         {
+            GUILayout.Label("Base Stats");
             valueEditor.OnInspectorGUI();
+        }
+
+        growthEditor = CreateEditor(
+           serializedObject.FindProperty("statsGrowth").objectReferenceValue,
+           typeof(ValueContainerEditor)
+           );
+
+        if(growthEditor != null)
+        {
+            GUILayout.Label("Growth Stats");
+            growthEditor.OnInspectorGUI();
         }
 
         serializedObject.ApplyModifiedProperties();

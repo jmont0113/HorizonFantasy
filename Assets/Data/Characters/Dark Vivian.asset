@@ -29,7 +29,9 @@ MonoBehaviour:
   Name: Dark Vivian
   model: {fileID: 3828688119541841869, guid: 5b69e7be372d53748b6f577cd824a176, type: 3}
   stats: {fileID: 5228111363923596184}
+  statsGrowth: {fileID: 7717711783404447836}
   actor: {fileID: -5988443745149372984}
+  reward: {fileID: 6906625671867991004, guid: 7dd410f698509a441829c96405507ec5, type: 2}
   abilities:
   - {fileID: 11400000, guid: ea03820f48d237d4b9f2d6849a677c6a, type: 2}
   - {fileID: 11400000, guid: 2a6bebf6b01ddce48abe586d0dea2b51, type: 2}
@@ -53,3 +55,20 @@ MonoBehaviour:
   integers: e8030000ee0200002c0100006400000064000000c8000000c80000006400000064000000ee0200008a020000
   floats:
   - 100
+--- !u!114 &7717711783404447836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ccd9c72c8d9fdd4f882f9e67bb8907e, type: 3}
+  m_Name: Stats
+  m_EditorClassIdentifier: 
+  copyOf: {fileID: 11400000, guid: 76700b848056d814499bd05c20106d04, type: 2}
+  values: []
+  integers: d00700008403000090010000c8000000c80000002c0100002c010000c8000000c800000020030000bc020000
+  floats:
+  - 200

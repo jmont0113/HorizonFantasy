@@ -5,7 +5,6 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-
 public class Entity : ScriptableObject
 {
     public enum EntityType
@@ -18,6 +17,7 @@ public class Entity : ScriptableObject
     public string Name;
     public GameObject model;
     public ValueContainer stats;
+    public ValueContainer statsGrowth;
     public Actor actor;
     public RewardContainer reward;
     public List<Ability> abilities;
@@ -76,6 +76,14 @@ public class Entity : ScriptableObject
                     actor = (Actor)Embed(this, typeof(Actor), "Actor");
                 }
                     
+                if(statsGrowth == null)
+                {
+                    statsGrowth = (ValueContainer)Embed(this, typeof(ValueContainer), "Growth");
+
+                    ValueStructure statsStructure = (ValueStructure)AssetDatabase.LoadAssetAtPath("Assets/Data/Base/CharacterStats.asset", typeof(ValueStructure));
+                    statsGrowth.Form(statsStructure);
+                }
+
                 break;
         }
     }
@@ -116,6 +124,11 @@ public class Entity : ScriptableObject
         
         //create and embedding an actor instance to the character
         e.actor = (Actor)Embed(e, typeof(Actor), "Actor");
+
+        e.statsGrowth = (ValueContainer)Embed(e, typeof(ValueContainer), "Growth");
+
+        ValueStructure statsStructure = (ValueStructure)AssetDatabase.LoadAssetAtPath("Assets/Data/Base/CharacterStats.asset", typeof(ValueStructure));
+        e.statsGrowth.Form(statsStructure);
     }
     
     private static ScriptableObject Embed(UnityEngine.Object e, Type type, string n)
