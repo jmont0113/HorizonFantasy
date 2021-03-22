@@ -98,6 +98,7 @@ MonoBehaviour:
   combat: {fileID: 8144390983815133969}
   gameOverManager: {fileID: 663669146}
   cameraCharacterPivot: {fileID: 0}
+  currencies: {fileID: 0}
 --- !u!114 &1346196016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aa5e4364079f4f4fb20644b20c0d2c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 0}
 --- !u!114 &1639050293742433824
 MonoBehaviour:
   m_ObjectHideFlags: 0

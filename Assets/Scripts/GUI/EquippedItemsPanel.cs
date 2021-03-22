@@ -2,41 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EquippedItemsPanel : ItemPanel
+public class EquippedItemsPanel : Element
 {
+    [SerializeField] GameObject buttonPrefab;
+
     List<ItemButton> itemButtons;
 
-    private void OnEnable()
-    {
-        if(itemButtons == null)
-        {
-            itemButtons = new List<ItemButton>();
-            Show();
-            inventoryManager.equipment.onChange += UpdatePanel;
-        }
-        UpdatePanel();
-    }
+    Equipment equipment;
 
     public override void OnInteract(int id)
     {
         
     }
 
-    public override void UpdatePanel()
+    public override void UpdateElement(PartyControlManager manager)
     {
+        equipment = manager.equipment;
         for(int i = 0; i < itemButtons.Count; i++)
         {
-            itemButtons[i].Set(inventoryManager.equipment.equipmentSlots[i].equipped, this);
+            itemButtons[i].Set(equipment.equipmentSlots[i].equipped, this);
         }
     }
 
-    public override void Show()
+    public override void Show(PartyControlManager manager)
     {
-        for (int i = 0; i < inventoryManager.equipment.equipmentSlots.Length; i++)
+        equipment = manager.equipment;
+        itemButtons = new List<ItemButton>();
+        for (int i = 0; i < equipment.equipmentSlots.Length; i++)
         {
             GameObject newButton = Instantiate(buttonPrefab, transform);
             itemButtons.Add(newButton.GetComponent<ItemButton>());
-            itemButtons[i].Set(inventoryManager.equipment.equipmentSlots[i].equipped, this);
+            itemButtons[i].Set(equipment.equipmentSlots[i].equipped, this);
         }
     }
 }

@@ -2,48 +2,57 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryPanel : ItemPanel
+public class InventoryPanel : Element
 {
+    [SerializeField] GameObject buttonPrefab;
     List<ItemButton> buttons;
+    private Character character;
+    private Equipment equipment;
+    private Inventory inventory;
 
     public override void OnInteract(int id)
     {
-        ItemInstance item = inventoryManager.inventory.GetItem(id);
-        if(inventoryManager.equipment.CheckAvailableSlots(item))
+        ItemInstance item = inventory.GetItem(id);
+        if(equipment.CheckAvailableSlots(item))
         {
-            Item previousItem = inventoryManager.equipment.GetItemSlot(item.itemBase.itemType);
+            Item previousItem = equipment.GetItemSlot(item.itemBase.itemType);
             if(previousItem != null)
             {
-                inventoryManager.character.statsContainer.Subtract(previousItem.stats);
-                inventoryManager.inventory.AddItem(previousItem);
+                character.statsContainer.Subtract(previousItem.stats);
+                inventory.AddItem(previousItem);
             }
-            inventoryManager.character.statsContainer.Sum(item.itemBase.stats);
-            inventoryManager.equipment.Equip(item.itemBase);
-            inventoryManager.inventory.RemoveItem(item.itemBase);
-            UpdatePanel();
+            character.statsContainer.Sum(item.itemBase.stats);
+            equipment.Equip(item.itemBase);
+            inventory.RemoveItem(item.itemBase);
+
+            onInteract?.Invoke();
         }
     }
 
-    public override void Show()
+    public override void Show(PartyControlManager manager)
     {
-
+        character = manager.selectedCharacter;
+        equipment = manager.equipment;
+        inventory = manager.inventory;
     }
 
-    public override void UpdatePanel()
+    public override void UpdateElement(PartyControlManager manager)
     {
-        while(buttons.Count > inventoryManager.inventory.GetItemCount)
+        character = manager.selectedCharacter;
+        equipment = manager.equipment;
+        while (buttons.Count > manager.inventory.GetItemCount)
         {
             Destroy(buttons[0].gameObject);
             buttons.RemoveAt(0);
         }
-        for(int i = 0; i < inventoryManager.inventory.GetItemCount; i++)
+        for(int i = 0; i < manager.inventory.GetItemCount; i++)
         {
             if(i >= buttons.Count)
             {
                 GameObject newButton = Instantiate(buttonPrefab, transform);
                 buttons.Add(newButton.GetComponent<ItemButton>());
             }
-            buttons[i].Set(inventoryManager.inventory.GetItem(i), this);
+            buttons[i].Set(manager.inventory.GetItem(i), this);
         }
     }
 
@@ -53,6 +62,5 @@ public class InventoryPanel : ItemPanel
         {
             buttons = new List<ItemButton>();
         }
-        UpdatePanel();
     }
 }
