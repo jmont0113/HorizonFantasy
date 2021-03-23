@@ -119,10 +119,40 @@ public class AbilityController : MonoBehaviour
 
     void Execute()
     {
+        Execute(caster, ability, targets);
+    }
+
+    public void Execute(CombatCharacter caster, Ability ability, List<CombatCharacter> targets)
+    {
+        #region Guard clause
+        if (targets == null)
+        {
+            Debug.LogError("targets are null anc can't be targeted");
+            return;
+        }
+
+        if(targets.Count == 0)
+        {
+            Debug.LogError("There is no targets in the targets list to target with your ability");
+            return;
+        }
+
+        if(caster == null)
+        {
+            Debug.LogError("caster is null");
+            return;
+        }
+
+        if (ability == null)
+        {
+            Debug.LogError("ability is null");
+            return;
+        }
+        #endregion
         ability.Activate(caster, targets);
         caster.Play(ability.animationName);
 
-        if (ability.source != null)
+        if(ability.source != null)
         {
             caster.character.statsContainer.Subtract(ability.source, ability.cost);
         }

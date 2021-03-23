@@ -66,7 +66,10 @@ public class CombatLoop : MonoBehaviour
         abilityPanel.Show(false);
         pause = true;
 
-        abilityController.InitiateAbility(awaitingActionQueue[0].abilities[id], awaitingActionQueue[0]);
+        abilityController.InitiateAbility(
+            awaitingActionQueue[0].abilities[id], 
+            awaitingActionQueue[0]
+            );
     }
 
     internal void PassTurn()
@@ -89,6 +92,8 @@ public class CombatLoop : MonoBehaviour
         }
 
         CheckCombatCondition();
+
+        ProcessAIAgent();
 
         if(awaitingActionQueue.Count > 0)
         {
@@ -115,6 +120,32 @@ public class CombatLoop : MonoBehaviour
 
             c.Tick(tick);
         }
+    }
+
+    private void ProcessAIAgent()
+    {
+        if(awaitingActionQueue.Count == 0) { return; }
+
+        CombatCharacter caster = awaitingActionQueue[0];
+        AIAgent agent = caster.GetComponent<AIAgent>();
+        if (agent == null)
+        {
+            return;
+        }
+
+        int abilityID = agent.SelectAbility();
+
+        List<CombatCharacter> targets = agent.SelectTargets(
+            caster.abilities[abilityID],
+            caster,
+            this
+            );
+
+        abilityController.Execute(
+            caster, 
+            caster.abilities[abilityID], 
+            targets
+            );
     }
 
     private void CheckCombatCondition()
