@@ -13,6 +13,22 @@ public class CameraController : MonoBehaviour
     float cameraSmooth;
     Vector3 velocity;
 
+    [SerializeField]
+    float moveSpeed;
+
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.J))
+        {
+            transform.RotateAround(target.transform.position, target.transform.up, moveSpeed * Time.deltaTime);
+        }
+        else if (Input.GetKey(KeyCode.L))
+        {
+            transform.RotateAround(target.transform.position, target.transform.up, -moveSpeed * Time.deltaTime);
+        }
+    }
+
+
     void LateUpdate()
     {
         Vector3 newPos = target.transform.position + transform.forward * -distance;

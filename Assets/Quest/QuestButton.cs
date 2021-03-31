@@ -12,14 +12,21 @@ public class QuestButton : MonoBehaviour
     public Sprite waitingImage;
     public Sprite doneImage;
     public QuestEvent thisEvent;
+    public CompassController compassController;
 
     QuestEvent.EventStatus status;
+
+    void Awake()
+    {
+        buttonComponent.onClick.AddListener(ClickHandler);
+        compassController = GameObject.Find("Compass").GetComponent<CompassController>();
+    }
 
     public void Setup(QuestEvent e, GameObject scrollList)
     {
         thisEvent = e;
         buttonComponent.transform.SetParent(scrollList.transform, false);
-        eventName.text = " <b> " + thisEvent.name + " </b> " + thisEvent.description;
+        eventName.text = "<b>" + thisEvent.name + "</b>\n" + thisEvent.description;
         status = thisEvent.status;
         icon.texture = waitingImage.texture;
         buttonComponent.interactable = false;
@@ -42,6 +49,14 @@ public class QuestButton : MonoBehaviour
         {
             icon.texture = currentImage.texture;
             buttonComponent.interactable = true;
+            ClickHandler();
         }
+    }
+
+    public void ClickHandler()
+    {
+        //set compass controller to point toward the location
+        //of this event
+        compassController.target = thisEvent.location;
     }
 }

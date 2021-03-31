@@ -62,6 +62,7 @@ public class Entity : ScriptableObject
                 }
 
                 break;
+
             case EntityType.Character:
                 if (stats == null)
                 {

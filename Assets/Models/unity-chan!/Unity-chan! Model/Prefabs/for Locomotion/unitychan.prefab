@@ -7000,7 +7000,7 @@ GameObject:
   - component: {fileID: 1599924791645910690}
   m_Layer: 0
   m_Name: unitychan
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7154,6 +7154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4828b0a1ffef2524b8b0b511a093ec26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currenciesStructure: {fileID: 11400000, guid: 16e324bdbcd5e6647907852f353c0160,
+    type: 2}
 --- !u!1 &1164952811
 GameObject:
   m_ObjectHideFlags: 0
