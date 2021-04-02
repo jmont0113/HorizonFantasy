@@ -15,7 +15,7 @@ public class Quests
     public string summary;          //string from our quest Giver/Receiver
     public int nextQuest;           //the next quest - if there is any (chain quest)
 
-    public string questObjectives;  //name of the quest objective (also for remove)
+    public string questObjective;  //name of the quest objective (also for remove)
     public int questObjectiveCount; //current number of questObjective count
     public int questObjectiveRequirement;  //required amount of quest objective objects
 
