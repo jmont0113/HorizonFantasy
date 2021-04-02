@@ -116,7 +116,7 @@ public class Entity : ScriptableObject
             );
         e.reward.rewards.Form(rewardsStructure);
     }
-    
+
     [MenuItem("Assets/Create/Data/Character")]
     static void CreateCharacterInstance()
     {

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc6fd6b422c1194b97bb8b9bca4c1a1, type: 3}
+  m_Name: Bandit Dialogue
+  m_EditorClassIdentifier: 
+  text:
+  - Hey, are you the bandit?
+  - That's my name! What do you want?
+  - I've been warned about you.
+  - I'm not your problem. Those slimes are....
+  - I'll take your word for it.
+  actor:
+  - {fileID: 11400000, guid: 8ad079a14b6a7fe4cbbc74305f3f0f0d, type: 2}
+  - {fileID: 11400000, guid: b434de66ecea69045acbcd93486f9b69, type: 2}
+  - {fileID: 11400000, guid: 8ad079a14b6a7fe4cbbc74305f3f0f0d, type: 2}
+  - {fileID: 11400000, guid: b434de66ecea69045acbcd93486f9b69, type: 2}
+  - {fileID: 11400000, guid: 8ad079a14b6a7fe4cbbc74305f3f0f0d, type: 2}

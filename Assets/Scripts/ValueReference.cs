@@ -115,10 +115,19 @@ public class ValueIntReference : ValueReference
         base.RecalculateDependencies();
     }
 
-    internal void Set(int v)
+    public void Set(int v)
     {
         value = v;
         onChange?.Invoke();
         base.RecalculateDependencies();
     }
+
+    /*
+     *  internal void Set(int v)
+    {
+        value = v;
+        onChange?.Invoke();
+        base.RecalculateDependencies();
+    }
+    */
 }

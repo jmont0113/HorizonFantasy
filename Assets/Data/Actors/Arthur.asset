@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00947fd69e05d69409f5f30e54b07fb4, type: 3}
-  m_Name: Jammo
+  m_Name: Arthur
   m_EditorClassIdentifier: 
-  Name: Robo
-  characterPortrait: {fileID: 21300000, guid: eef2049b4b913c445a28c89c9a184e0a, type: 3}
+  Name: Arthur
+  characterPortrait: {fileID: 21300000, guid: 3a5091cd783e82e42aa484fa3da952a7, type: 3}
