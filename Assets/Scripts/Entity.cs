@@ -21,8 +21,9 @@ public class Entity : ScriptableObject
     public Actor actor;
     public RewardContainer reward;
     public List<Ability> abilities;
-    [ReadOnly] public EntityType entityType;
-
+    //[ReadOnly] public EntityType entityType;
+    public EntityType entityType;
+#if UNITY_EDITOR
     private void OnEnable()
     {
         switch (entityType)
@@ -100,7 +101,7 @@ public class Entity : ScriptableObject
         e.stats.Form(statsStructure);
         return e;
     }
-    
+
     [MenuItem("Assets/Create/Data/Enemy")]
     static void CreateEnemyInstance()
     {
@@ -131,7 +132,7 @@ public class Entity : ScriptableObject
         ValueStructure statsStructure = (ValueStructure)AssetDatabase.LoadAssetAtPath("Assets/Data/Base/CharacterStats.asset", typeof(ValueStructure));
         e.statsGrowth.Form(statsStructure);
     }
-    
+
     private static ScriptableObject Embed(UnityEngine.Object e, Type type, string n)
     {
         ScriptableObject so = CreateInstance(type);
@@ -153,4 +154,5 @@ public class Entity : ScriptableObject
         }
         return path;
     }
+#endif
 }
