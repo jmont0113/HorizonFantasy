@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class CombatCharacter : MonoBehaviour
 {
     public ActionTimer actionTimer;
@@ -10,6 +11,10 @@ public class CombatCharacter : MonoBehaviour
     public List<Ability> abilities;
     public bool dead;
     public Animator animator;
+
+    AudioSource painSound;
+
+    
 
     public bool Ready
     {
@@ -21,6 +26,7 @@ public class CombatCharacter : MonoBehaviour
 
     private void Start()
     {
+        painSound = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         if(animator == null)
         {
@@ -36,7 +42,7 @@ public class CombatCharacter : MonoBehaviour
     internal void TakeDamage(int damage)
     {
         //implement all possible situational conditions specific for combat, here.
-        
+        painSound.Play();
         character.TakeDamage(damage);
         DeathCheck();
     }
@@ -50,6 +56,7 @@ public class CombatCharacter : MonoBehaviour
         if(dead)
         {
             animator.Play("Dead");
+            painSound.Play();
         }
     }
 
@@ -78,4 +85,6 @@ public class CombatCharacter : MonoBehaviour
     {
         animator.Play(animationName);
     }
+
+
 }

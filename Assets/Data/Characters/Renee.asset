@@ -34,9 +34,6 @@ MonoBehaviour:
   reward: {fileID: 6906625671867991004, guid: 7dd410f698509a441829c96405507ec5, type: 2}
   abilities:
   - {fileID: 11400000, guid: ea03820f48d237d4b9f2d6849a677c6a, type: 2}
-  - {fileID: 11400000, guid: 2a6bebf6b01ddce48abe586d0dea2b51, type: 2}
-  - {fileID: 11400000, guid: 7a3e81775fcbc1b44bcca4800bc2c4f5, type: 2}
-  - {fileID: 11400000, guid: ec6099bae097b3643898e7e376a6448b, type: 2}
   entityType: 2
 --- !u!114 &5228111363923596184
 MonoBehaviour:

@@ -78,7 +78,7 @@ public class LevelController : MonoBehaviour
         Debug.Log("Loading Game...");
         SceneManager.LoadScene(Gameplay);
     }
-    public void ResartGame()
+    public void RestartGame()
     {
         Debug.Log("Restart Game...");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

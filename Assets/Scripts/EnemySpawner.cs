@@ -6,7 +6,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     EnemySpawnerContainer container;
-    public float wanderingDistnace = 5f;
+    public float wanderingDistance = 5f;
 
     private void Start()
     {

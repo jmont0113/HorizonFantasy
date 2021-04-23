@@ -9,12 +9,15 @@ public class Combat : MonoBehaviour
     [SerializeField] SceneManage sceneManage;
     [SerializeField] GameObject enemyPrefab;
     GameObject enemyGroup;
+    public AudioSource battleMusic;
+    public AudioSource VictoryMusic;
 
     public void InitiateCombat(EnemyEncounter encounter, Party party, CombatArena arena = null)
     {
         if(arena == null)
         {
             arena = defaultArena;
+            battleMusic.Play();
         }
 
         GameManager.instance.SetControlScheme(ControlScheme.Combat);
@@ -58,10 +61,14 @@ public class Combat : MonoBehaviour
 
     public void ExitCombat()
     {
-        for(int i = 0; i < combatLoop.enemies.Count; i++)
+        for (int i = 0; i < combatLoop.enemies.Count; i++)
         {
             Destroy(combatLoop.enemies[i].gameObject);
+            battleMusic.Stop();
+            VictoryMusic.Play();
         }
+
+        
 
         GameManager.instance.SetControlScheme(ControlScheme.Exploration);
 

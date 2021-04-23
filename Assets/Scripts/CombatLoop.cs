@@ -15,6 +15,7 @@ public class CombatLoop : MonoBehaviour
     AbilityController abilityController;
     [SerializeField] GameObject winCanvas;
     [SerializeField] WinConditionCanvasController winCanvasController;
+    [SerializeField] AudioSource gameOver;
 
     private void Start()
     {
@@ -153,6 +154,7 @@ public class CombatLoop : MonoBehaviour
         if (CheckLoseCondition())
         {
             GameManager.instance.gameOverManager.GameOver();
+            gameOver.Play();
             Debug.Log("You lost the battle");
             pause = true;
         }

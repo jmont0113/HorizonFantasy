@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraController : MonoBehaviour
 {
@@ -39,6 +40,7 @@ public class CameraController : MonoBehaviour
     internal void ChangeTarget(Transform _target, float _distance, 
         float _smooth)
     {
+       
         target = _target;
         distance = _distance;
         cameraSmooth = _smooth;
@@ -57,15 +59,19 @@ public class CameraController : MonoBehaviour
 
     public void Warp(Vector3 worldPosition, bool prebake = false)
     {
-        if(prebake == false)
+        
+        if (prebake == false)
         {
+            
             transform.position = worldPosition;
         }
         else
         {
+            
             Vector3 newPos = target.transform.position + transform.forward * -distance;
 
             transform.position = newPos;
+
         }
     }
 }

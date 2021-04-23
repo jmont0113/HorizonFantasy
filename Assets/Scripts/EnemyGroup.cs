@@ -57,8 +57,8 @@ public class EnemyGroup : MonoBehaviour
     void SetDestination()
     {
         Vector3 pos = spawnPoint.position;
-        pos += Vector3.right * Random.Range(-enemySpawner.wanderingDistnace, enemySpawner.wanderingDistnace);
-        pos += Vector3.forward * Random.Range(-enemySpawner.wanderingDistnace, enemySpawner.wanderingDistnace);
+        pos += Vector3.right * Random.Range(-enemySpawner.wanderingDistance, enemySpawner.wanderingDistance);
+        pos += Vector3.forward * Random.Range(-enemySpawner.wanderingDistance, enemySpawner.wanderingDistance);
         agent.SetDestination(pos);
     }
 
