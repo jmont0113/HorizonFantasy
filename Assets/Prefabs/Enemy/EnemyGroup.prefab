@@ -497,6 +497,9 @@ MonoBehaviour:
   maxTimer: 20
   boxPivot: {fileID: 7829625814157390091}
   boxHalfSize: {x: 2, y: 2, z: 3}
+  flashImage: {fileID: 3713239759958613271, guid: 1b97cc792b4d14a46bde5401c079c815,
+    type: 3}
+  delayTime: 0.5
 --- !u!1 &1989916952965676
 GameObject:
   m_ObjectHideFlags: 0

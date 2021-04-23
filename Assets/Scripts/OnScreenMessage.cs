@@ -24,7 +24,7 @@ public class OnScreenMessage : MonoBehaviour
     List<TextContainer> busy;
     List<TextContainer> free;
 
-    private void Start()
+    public void Start()
     {
         busy = new List<TextContainer>();
         free = new List<TextContainer>();
@@ -41,7 +41,7 @@ public class OnScreenMessage : MonoBehaviour
             rectTransform.position = RectTransformUtility.WorldToScreenPoint
                 (Camera.main, worldSpacePosition);
 
-            TextContainer textContainer = 
+            TextContainer textContainer =
                 new TextContainer(rectTransform, 5f, go.GetComponent<Text>());
             textContainer.text.text = message;
             busy.Add(textContainer);
@@ -58,7 +58,7 @@ public class OnScreenMessage : MonoBehaviour
         }
     }
 
-    private void Update()
+    public void Update()
     {
         for(int i = 0; i < busy.Count; i++)
         {

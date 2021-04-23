@@ -171,6 +171,8 @@ MonoBehaviour:
   sceneManage: {fileID: 8051978983042266827}
   enemyPrefab: {fileID: 6622502725881744617, guid: 075b49972a9e1df49a2bdaf1be2ac200,
     type: 3}
+  battleMusic: {fileID: 0}
+  VictoryMusic: {fileID: 0}
 --- !u!114 &8051978983042266827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,3 +229,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
+  gameOver: {fileID: 0}
