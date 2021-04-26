@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14e4fcf7e3c078a43afb0436849fe737, type: 3}
-  m_Name: Dialogue Option Test
+  m_Name: Dialogue Option Test 1
   m_EditorClassIdentifier: 
   dialogueInfo:
   - myName: Arthur
@@ -45,47 +45,13 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - buttonName: Helping out some people
-    nextDialogue: {fileID: 11400000, guid: 339c3486ed3e5b142b51bccbecadb931, type: 2}
+    nextDialogue: {fileID: 11400000, guid: 7b54cd3e66bda684ebc66df8083bf2ed, type: 2}
     myEvent:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 11400000, guid: a0aeeff759ee98446bf005404b78c9f9, type: 2}
           m_TargetAssemblyTypeName: EventBehaviour, Assembly-CSharp
           m_MethodName: TestEvent02
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - buttonName: Just chilling
-    nextDialogue: {fileID: 11400000, guid: 74fd1e042e039f949888606b07f036c3, type: 2}
-    myEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 11400000, guid: a0aeeff759ee98446bf005404b78c9f9, type: 2}
-          m_TargetAssemblyTypeName: EventBehaviour, Assembly-CSharp
-          m_MethodName: TestEvent03
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - buttonName: Going home
-    nextDialogue: {fileID: 11400000, guid: e9a0b6b19287efa4c8155441205291a0, type: 2}
-    myEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 11400000, guid: a0aeeff759ee98446bf005404b78c9f9, type: 2}
-          m_TargetAssemblyTypeName: EventBehaviour, Assembly-CSharp
-          m_MethodName: TestEvent04
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

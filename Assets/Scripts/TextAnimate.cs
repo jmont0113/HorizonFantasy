@@ -11,6 +11,10 @@ public class TextAnimate : MonoBehaviour
     public GameObject loadingSpin03;
     public GameObject loadingSpin04;
 
+    public GameObject sky01;
+    public GameObject sky02;
+    public GameObject sky03;
+    public GameObject sky04;
 
     void Start()
     {
@@ -19,5 +23,10 @@ public class TextAnimate : MonoBehaviour
         LeanTween.rotate(loadingSpin02, new Vector3(0, 0, 180), 1f).setEaseOutCirc().setLoopCount(5);
         LeanTween.rotate(loadingSpin03, new Vector3(0, 0, 180), 1f).setEaseOutCirc().setLoopCount(5);
         LeanTween.rotate(loadingSpin04, new Vector3(0, 0, 180), 1f).setEaseOutCirc().setLoopCount(5);
+
+        LeanTween.scale(sky01, new Vector3(0.75f, 1f, 0.75f), 2f).setEaseLinear().setLoopPingPong();
+        LeanTween.scale(sky02, new Vector3(0.75f, 1f, 0.75f), 2f).setEaseLinear().setLoopPingPong();
+        LeanTween.scale(sky03, new Vector3(0.75f, 1f, 0.75f), 2f).setEaseLinear().setLoopPingPong();
+        LeanTween.scale(sky04, new Vector3(0.75f, 0.75f, 1f), 2).setEaseLinear().setLoopPingPong();
     }
 }

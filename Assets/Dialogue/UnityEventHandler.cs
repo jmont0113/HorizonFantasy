@@ -12,7 +12,6 @@ public class UnityEventHandler : MonoBehaviour, IPointerDownHandler
     //this is what happens when you click on this button 
     public void OnPointerDown(PointerEventData eventData)
     {
-        /*
         eventHandler.Invoke();
         DialoguesManager.instance.CloseOptions();
         DialoguesManager.instance.inDialogue = false; 
@@ -21,6 +20,5 @@ public class UnityEventHandler : MonoBehaviour, IPointerDownHandler
         {
             DialoguesManager.instance.EnqueueDialogue(myDialogue);
         }
-        */
     }
 }
