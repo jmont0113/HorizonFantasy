@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.EventSystems;
 
 public class CombatCharacter : MonoBehaviour
 {
@@ -14,7 +14,7 @@ public class CombatCharacter : MonoBehaviour
 
     AudioSource painSound;
 
-    
+    ParticleSystem death;
 
     public bool Ready
     {
@@ -26,6 +26,7 @@ public class CombatCharacter : MonoBehaviour
 
     private void Start()
     {
+        death = GetComponent<ParticleSystem>();
         painSound = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         if(animator == null)
@@ -45,10 +46,11 @@ public class CombatCharacter : MonoBehaviour
         painSound.Play();
         character.TakeDamage(damage);
         DeathCheck();
+        death.Play();
     }
 
     public Value characterHPValue;
-    void DeathCheck()
+    public void DeathCheck()
     {
         int curHp = 0;
         character.statsContainer.Get(characterHPValue, out curHp);
@@ -57,6 +59,7 @@ public class CombatCharacter : MonoBehaviour
         {
             animator.Play("Dead");
             painSound.Play();
+            death.Play();
         }
     }
 

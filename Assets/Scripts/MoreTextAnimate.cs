@@ -17,6 +17,9 @@ public class MoreTextAnimate : MonoBehaviour
 
     public GameObject arrow;
 
+    public GameObject questTitle;
+    public GameObject questButton;
+
     void Start()
     {
         LeanTween.scale(text01, new Vector3(0.75f, 0.75f, 0.75f), 1f).setEaseLinear().setLoopPingPong();
@@ -31,5 +34,9 @@ public class MoreTextAnimate : MonoBehaviour
         LeanTween.scale(gameOverButton, new Vector3(0.75f, 0.75f, 0.75f), 1f).setEaseLinear().setLoopPingPong();
 
         LeanTween.scale(arrow, new Vector3(0.75f, 0.75f, 0.75f), 1f).setEaseLinear().setLoopPingPong();
+
+        LeanTween.scale(questTitle, new Vector3(0.75f, 0.75f, 0.75f), 1f).setEaseLinear().setLoopPingPong();
+
+        LeanTween.scale(questButton, new Vector3(0.75f, 0.75f, 0.75f), 1f).setEaseLinear().setLoopPingPong();
     }
 }

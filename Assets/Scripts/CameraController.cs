@@ -17,6 +17,8 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     float moveSpeed;
 
+
+
     void Update()
     {
         if (Input.GetKey(KeyCode.J))
@@ -40,7 +42,6 @@ public class CameraController : MonoBehaviour
     internal void ChangeTarget(Transform _target, float _distance, 
         float _smooth)
     {
-       
         target = _target;
         distance = _distance;
         cameraSmooth = _smooth;
@@ -62,16 +63,30 @@ public class CameraController : MonoBehaviour
         
         if (prebake == false)
         {
-            
             transform.position = worldPosition;
         }
         else
         {
-            
             Vector3 newPos = target.transform.position + transform.forward * -distance;
 
             transform.position = newPos;
-
         }
+    }
+
+    public IEnumerator Shake(float duration, float magnitude)
+    {
+        Vector3 orignalPosition = transform.position;
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            float x = UnityEngine.Random.Range(-1f, 1f) * magnitude;
+            float y = UnityEngine.Random.Range(-1f, 1f) * magnitude;
+
+            transform.position = new Vector3(x, y, -10f);
+            elapsed += Time.deltaTime;
+            yield return 0;
+        }
+        transform.position = orignalPosition;
     }
 }

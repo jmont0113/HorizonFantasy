@@ -14,8 +14,8 @@ public class AbilityButton : MonoBehaviour, IPointerClickHandler
         if(abilityPanel == null)
         {
             abilityPanel = transform.parent.GetComponent<AbilityPanel>();
-        }
 
+        }
         abilityPanel.Use(transform.GetSiblingIndex());
     }
 

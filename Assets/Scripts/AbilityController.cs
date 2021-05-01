@@ -12,6 +12,8 @@ public class AbilityController : MonoBehaviour
     [SerializeField] HighlightController highlightController;
     CombatCharacter caster;
 
+    public CameraController cameraShake;
+
     private void Start()
     {
         targets = new List<CombatCharacter>();
@@ -92,10 +94,12 @@ public class AbilityController : MonoBehaviour
         }
         if (targets.Count > 0)
         {
+            
             highlightController.Hide();
             highlightController.Highlight(targets);
             if (Input.GetMouseButtonDown(0))
             {
+                StartCoroutine(cameraShake.Shake(0.15f, 0.4f));
                 Execute();
             }
         }

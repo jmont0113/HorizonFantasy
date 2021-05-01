@@ -16,6 +16,8 @@ public class QuestButton : MonoBehaviour
 
     QuestEvent.EventStatus status;
 
+    public GameObject quest;
+
     void Awake()
     {
         buttonComponent.onClick.AddListener(ClickHandler);
@@ -50,6 +52,7 @@ public class QuestButton : MonoBehaviour
             icon.texture = currentImage.texture;
             buttonComponent.interactable = true;
             ClickHandler();
+            LeanTween.scale(quest, new Vector3(0.75f, 0.75f, 0.75f), 1f).setEaseLinear().setLoopPingPong();
         }
     }
 

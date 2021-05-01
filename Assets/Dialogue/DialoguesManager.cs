@@ -51,38 +51,7 @@ public class DialoguesManager : MonoBehaviour
         dialogueBox.SetActive(true);
         dialogueInfo.Clear();
 
-        if(db is DialogueOptions)
-        {
-            isDialogueOption = true;
-            DialogueOptions dialogueOptions = db as DialogueOptions;
-            optionsAmount = dialogueOptions.optionsInfo.Length;
-            questionText.text = dialogueOptions.questionText;
-
-            for(int i = 0; i < optionButtons.Length; i++)
-            {
-                optionButtons[i].SetActive(false);
-            }
-
-            for (int i = 0; i < optionsAmount; i++)
-            {
-                optionButtons[i].SetActive(true);
-                optionButtons[i].transform.GetChild(0).gameObject.GetComponent<Text>().text = dialogueOptions.optionsInfo[i].buttonName;
-                UnityEventHandler myEventHandler = optionButtons[i].GetComponent<UnityEventHandler>();
-                myEventHandler.eventHandler = dialogueOptions.optionsInfo[i].myEvent;
-                if(dialogueOptions.optionsInfo[i].nextDialogue != null)
-                {
-                    myEventHandler.myDialogue = dialogueOptions.optionsInfo[i].nextDialogue;
-                }
-                else
-                {
-                    myEventHandler.myDialogue = null;
-                }
-            }
-        }
-        else
-        {
-            isDialogueOption = false;
-        }
+        OptionsParser(db);
 
         foreach (DialogueBase.Info info in db.dialogueInfo)
         {
@@ -154,5 +123,41 @@ public class DialoguesManager : MonoBehaviour
     public void CloseOptions()
     {
         dialogueOptionUI.SetActive(false);
+    }
+
+    private void OptionsParser(DialogueBase db)
+    {
+        if (db is DialogueOptions)
+        {
+            isDialogueOption = true;
+            DialogueOptions dialogueOptions = db as DialogueOptions;
+            optionsAmount = dialogueOptions.optionsInfo.Length;
+            questionText.text = dialogueOptions.questionText;
+
+            for (int i = 0; i < optionButtons.Length; i++)
+            {
+                optionButtons[i].SetActive(false);
+            }
+
+            for (int i = 0; i < optionsAmount; i++)
+            {
+                optionButtons[i].SetActive(true);
+                optionButtons[i].transform.GetChild(0).gameObject.GetComponent<Text>().text = dialogueOptions.optionsInfo[i].buttonName;
+                UnityEventHandler myEventHandler = optionButtons[i].GetComponent<UnityEventHandler>();
+                myEventHandler.eventHandler = dialogueOptions.optionsInfo[i].myEvent;
+                if (dialogueOptions.optionsInfo[i].nextDialogue != null)
+                {
+                    myEventHandler.myDialogue = dialogueOptions.optionsInfo[i].nextDialogue;
+                }
+                else
+                {
+                    myEventHandler.myDialogue = null;
+                }
+            }
+        }
+        else
+        {
+            isDialogueOption = false;
+        }
     }
 }
