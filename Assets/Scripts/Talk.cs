@@ -5,6 +5,7 @@ using UnityEngine;
 public class Talk : InteractableModule
 {
     [SerializeField] Dialogue dialogue;
+
     public override void Interact(GameObject actor)
     {
         if(dialogue != null)
