@@ -15,10 +15,6 @@ public class LevelController : MonoBehaviour
         {
             Application.Quit();
         }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
         if(Input.GetKeyDown(KeyCode.Pause) || Input.GetKeyDown(KeyCode.Space))
         {
             if (GameIsPaused)

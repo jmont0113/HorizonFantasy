@@ -8,7 +8,7 @@ public class DialogueControl : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            GameManager.instance.dialogueManager.Next();
+           GameManager.instance.dialogueManager.Next();
         }
     }
 }
