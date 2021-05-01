@@ -13,17 +13,13 @@ MonoBehaviour:
   m_Name: Dialogue Option Test
   m_EditorClassIdentifier: 
   dialogueInfo:
-  - myName: Arthur
-    portrait: {fileID: 21300000, guid: 3a5091cd783e82e42aa484fa3da952a7, type: 3}
+  - character: {fileID: 11400000, guid: aa8b823ed295c3246aa35e3d66265fbc, type: 2}
     myText: Hello?
-  - myName: Vivian
-    portrait: {fileID: 21300000, guid: b19ef563f1c594549afb9a522a722b1f, type: 3}
+  - character: {fileID: 11400000, guid: 315eb2c4b3c3b334dbed7c68436d37a4, type: 2}
     myText: Hey! What are you doing?
-  - myName: Arthur
-    portrait: {fileID: 21300000, guid: 3a5091cd783e82e42aa484fa3da952a7, type: 3}
+  - character: {fileID: 11400000, guid: aa8b823ed295c3246aa35e3d66265fbc, type: 2}
     myText: 'I''m just chilling. Anyways just watch out for the bandit. '
-  - myName: Vivian
-    portrait: {fileID: 21300000, guid: b19ef563f1c594549afb9a522a722b1f, type: 3}
+  - character: {fileID: 11400000, guid: 315eb2c4b3c3b334dbed7c68436d37a4, type: 2}
     myText: 'Will do. You stay safe. '
   questionText: 'What are you doing? '
   optionsInfo:

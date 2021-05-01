@@ -79,9 +79,9 @@ public class DialoguesManager : MonoBehaviour
         DialogueBase.Info info = dialogueInfo.Dequeue();
         completeText = info.myText;
 
-        dialogueName.text = info.myName;
+        dialogueName.text = info.character.myName;
         dialogueText.text = info.myText;
-        dialoguePortrait.sprite = info.portrait;
+        dialoguePortrait.sprite = info.character.myPortrait;
 
         dialogueText.text = "";
         StartCoroutine(TypeText(info));
@@ -106,17 +106,19 @@ public class DialoguesManager : MonoBehaviour
     public void EndofDialogue()
     {
         dialogueBox.SetActive(false);
-        inDialogue = false;
         OptionsLogic();
     }
 
     
     private void OptionsLogic()
     {
-        dialogueBox.SetActive(false);
         if(isDialogueOption == true)
         {
             dialogueOptionUI.SetActive(true);
+        }
+        else
+        {
+            inDialogue = false;
         }
     }
 

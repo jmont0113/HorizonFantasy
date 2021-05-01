@@ -8,8 +8,7 @@ public class DialogueBase : ScriptableObject
     [System.Serializable]
     public class Info
     {
-        public string myName;
-        public Sprite portrait;
+        public CharacterProfile character;
         [TextArea(4, 8)]
         public string myText;
     }

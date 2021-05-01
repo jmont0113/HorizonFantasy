@@ -12,11 +12,6 @@ public class TestScript : MonoBehaviour
         DialoguesManager.instance.EnqueueDialogue(dialogue);
     }
 
-    private void Start()
-    {
-        
-    }
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
