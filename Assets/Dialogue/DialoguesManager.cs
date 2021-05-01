@@ -84,6 +84,7 @@ public class DialoguesManager : MonoBehaviour
         dialoguePortrait.sprite = info.character.myPortrait;
 
         dialogueText.text = "";
+        AudioManager.instance.PlayClip(info.character.myVoice);
         StartCoroutine(TypeText(info));
     }
 
