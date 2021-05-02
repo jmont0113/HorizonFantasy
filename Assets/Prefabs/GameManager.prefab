@@ -99,6 +99,7 @@ MonoBehaviour:
   gameOverManager: {fileID: 663669146}
   cameraCharacterPivot: {fileID: 0}
   currencies: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &1346196016
 MonoBehaviour:
   m_ObjectHideFlags: 0

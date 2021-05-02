@@ -106,9 +106,6 @@ MonoBehaviour:
   distance: 7
   cameraSmooth: 0.2
   moveSpeed: 100
-  shakeMagnitude: 0.05
-  shakeTime: 0.5
-  mainCamera: {fileID: 8698277392484861650}
 --- !u!222 &8698277392484861649
 CanvasRenderer:
   m_ObjectHideFlags: 0

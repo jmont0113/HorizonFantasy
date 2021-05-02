@@ -15,3 +15,4 @@ MonoBehaviour:
   myName: Robo
   myPortrait: {fileID: 21300000, guid: eef2049b4b913c445a28c89c9a184e0a, type: 3}
   myVoice: {fileID: 8300000, guid: 6ed48b26175f31d4dbd5af2e8e4d71ed, type: 3}
+  myFont: {fileID: 12800000, guid: 8a2b9e2a607dd2143b58c44bc32410b4, type: 3}

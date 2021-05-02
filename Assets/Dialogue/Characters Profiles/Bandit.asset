@@ -15,3 +15,4 @@ MonoBehaviour:
   myName: Bandit
   myPortrait: {fileID: 21300000, guid: 921203f8dfa78324aa43d37e2cd53d4c, type: 3}
   myVoice: {fileID: 8300000, guid: 6ed48b26175f31d4dbd5af2e8e4d71ed, type: 3}
+  myFont: {fileID: 12800000, guid: 997a43b767814dd0a7642ec9b78cba41, type: 3}

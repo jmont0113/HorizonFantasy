@@ -5,7 +5,16 @@ using UnityEngine.UI;
 
 public class DialoguesManager : MonoBehaviour
 {
+    private readonly List<char> punctuationCharacters = new List<char>
+    {
+        '.',
+        ',',
+        '!',
+        '?'
+    };
+
     public static DialoguesManager instance;
+
     private void Awake()
     {
         if(instance != null)
@@ -37,6 +46,7 @@ public class DialoguesManager : MonoBehaviour
     
     private bool isCurrentlyTyping;
     private string completeText;
+    private bool buffer;
 
     void Start()
     {
@@ -46,7 +56,9 @@ public class DialoguesManager : MonoBehaviour
     public void EnqueueDialogue(DialogueBase db)
     {
         if (inDialogue) return;
+        buffer = true;
         inDialogue = true;
+        StartCoroutine(BufferTimer());
 
         dialogueBox.SetActive(true);
         dialogueInfo.Clear();
@@ -64,6 +76,7 @@ public class DialoguesManager : MonoBehaviour
     {
         if (isCurrentlyTyping == true)
         {
+            if (buffer == true) return;
             CompleteText();
             StopAllCoroutines();
             isCurrentlyTyping = false;
@@ -81,11 +94,24 @@ public class DialoguesManager : MonoBehaviour
 
         dialogueName.text = info.character.myName;
         dialogueText.text = info.myText;
+        dialogueText.font = info.character.myFont;
         dialoguePortrait.sprite = info.character.myPortrait;
 
         dialogueText.text = "";
         AudioManager.instance.PlayClip(info.character.myVoice);
         StartCoroutine(TypeText(info));
+    }
+
+    private bool CheckPunctuation(char c)
+    {
+        if(punctuationCharacters.Contains(c))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     IEnumerator TypeText(DialogueBase.Info info)
@@ -95,10 +121,21 @@ public class DialoguesManager : MonoBehaviour
         {
             yield return new WaitForSeconds(delay);
             dialogueText.text += c;
+            
+            if(CheckPunctuation(c))
+            {
+                yield return new WaitForSeconds(0.1f);
+            }
         }
         isCurrentlyTyping = false;
     }
 
+    IEnumerator BufferTimer()
+    {
+        yield return new WaitForSeconds(0.1f);
+        buffer = false;
+    }
+    
     private void CompleteText()
     {
         dialogueText.text = completeText;
@@ -161,6 +198,27 @@ public class DialoguesManager : MonoBehaviour
         else
         {
             isDialogueOption = false;
+        }
+    }
+
+    private void Update()
+    {
+        if(inDialogue)
+        {
+            GameManager.instance.characterControl.enabled = false;
+        }
+        else
+        {
+            GameManager.instance.characterControl.enabled = true;
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            if(inDialogue)
+            {
+                //DequeueDialogue();
+
+            }
         }
     }
 }

@@ -6,9 +6,9 @@ public class DialogueControl : MonoBehaviour
 {
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
-           GameManager.instance.dialogueManager.Next();
+            GameManager.instance.dialogueManager.Next();
         }
     }
 }

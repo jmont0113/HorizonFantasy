@@ -9,4 +9,5 @@ public class CharacterProfile : ScriptableObject
     public string myName;
     public Sprite myPortrait;
     public AudioClip myVoice;
+    public Font myFont;
 }

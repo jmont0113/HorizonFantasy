@@ -40,6 +40,8 @@ public class GameManager : MonoBehaviour
     public Transform cameraCharacterPivot;
     public Currencies currencies;
 
+    public Transform player;
+
     void SetControlCharacter(GameObject target)
     {
         characterControl.Init(target);

@@ -15,3 +15,4 @@ MonoBehaviour:
   myName: Vivian
   myPortrait: {fileID: 21300000, guid: b19ef563f1c594549afb9a522a722b1f, type: 3}
   myVoice: {fileID: 8300000, guid: 6ed48b26175f31d4dbd5af2e8e4d71ed, type: 3}
+  myFont: {fileID: 12800000, guid: 5dd49b3eacc540408c98eee0de38e0f1, type: 3}
