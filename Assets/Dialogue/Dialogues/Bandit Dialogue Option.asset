@@ -10,28 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14e4fcf7e3c078a43afb0436849fe737, type: 3}
-  m_Name: Robo Dialogue Option
+  m_Name: Bandit Dialogue Option
   m_EditorClassIdentifier: 
   dialogueInfo: []
   questionText: 
   optionsInfo:
   - buttonName: 
-    nextDialogue: {fileID: 11400000, guid: 2ef92426dc82b0b4fa5abe15a46a00e1, type: 2}
+    nextDialogue: {fileID: 11400000, guid: b010b7116d6242a44b69434aebcae8a0, type: 2}
     myEvent:
       m_PersistentCalls:
         m_Calls: []
   - buttonName: 
-    nextDialogue: {fileID: 11400000, guid: accfcb2eac03ffb4295ed9d3fcbbdb93, type: 2}
+    nextDialogue: {fileID: 11400000, guid: 90e945af2fd925e48a20ec1debf3ca71, type: 2}
     myEvent:
       m_PersistentCalls:
         m_Calls: []
   - buttonName: 
-    nextDialogue: {fileID: 11400000, guid: a6c75c40da81fbb479c868f732c26c98, type: 2}
+    nextDialogue: {fileID: 11400000, guid: 0f97e4c545a4a1c4d91b0e80791f7620, type: 2}
     myEvent:
       m_PersistentCalls:
         m_Calls: []
   - buttonName: 
-    nextDialogue: {fileID: 11400000, guid: 8a12a98c4272cf8409baa11a551dbe43, type: 2}
+    nextDialogue: {fileID: 11400000, guid: ed172b6bd6e7a7e4c99f9eabb68ec8b3, type: 2}
     myEvent:
       m_PersistentCalls:
         m_Calls: []

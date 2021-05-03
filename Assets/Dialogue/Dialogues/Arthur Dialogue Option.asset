@@ -10,28 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14e4fcf7e3c078a43afb0436849fe737, type: 3}
-  m_Name: Robo Dialogue Option
+  m_Name: Arthur Dialogue Option
   m_EditorClassIdentifier: 
   dialogueInfo: []
   questionText: 
   optionsInfo:
   - buttonName: 
-    nextDialogue: {fileID: 11400000, guid: 2ef92426dc82b0b4fa5abe15a46a00e1, type: 2}
+    nextDialogue: {fileID: 11400000, guid: d3073e6fe8658f842be3902004c7ae96, type: 2}
     myEvent:
       m_PersistentCalls:
         m_Calls: []
   - buttonName: 
-    nextDialogue: {fileID: 11400000, guid: accfcb2eac03ffb4295ed9d3fcbbdb93, type: 2}
+    nextDialogue: {fileID: 11400000, guid: 0f352932af3d46c439003d9f970d4a24, type: 2}
     myEvent:
       m_PersistentCalls:
         m_Calls: []
   - buttonName: 
-    nextDialogue: {fileID: 11400000, guid: a6c75c40da81fbb479c868f732c26c98, type: 2}
+    nextDialogue: {fileID: 11400000, guid: 39073499d21a7f94d989f49b15966e72, type: 2}
     myEvent:
       m_PersistentCalls:
         m_Calls: []
   - buttonName: 
-    nextDialogue: {fileID: 11400000, guid: 8a12a98c4272cf8409baa11a551dbe43, type: 2}
+    nextDialogue: {fileID: 11400000, guid: 45b66aef2c91cbd4b8b27bf6390cc78c, type: 2}
     myEvent:
       m_PersistentCalls:
         m_Calls: []

@@ -174,6 +174,8 @@ public class DialoguesManager : MonoBehaviour
             optionsAmount = dialogueOptions.optionsInfo.Length;
             questionText.text = dialogueOptions.questionText;
 
+            optionButtons[0].GetComponent<Button>().Select();
+
             for (int i = 0; i < optionButtons.Length; i++)
             {
                 optionButtons[i].SetActive(false);
