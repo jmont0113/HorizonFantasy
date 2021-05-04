@@ -12,26 +12,84 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14e4fcf7e3c078a43afb0436849fe737, type: 3}
   m_Name: Robo Dialogue Option
   m_EditorClassIdentifier: 
-  dialogueInfo: []
-  questionText: 
+  dialogueInfo:
+  - character: {fileID: 11400000, guid: 315eb2c4b3c3b334dbed7c68436d37a4, type: 2}
+    myText: Hey Vivian! I need your help.
+  - character: {fileID: 11400000, guid: aa8b823ed295c3246aa35e3d66265fbc, type: 2}
+    myText: Hey Robo. What can I do for you?
+  - character: {fileID: 11400000, guid: 315eb2c4b3c3b334dbed7c68436d37a4, type: 2}
+    myText: You see that door, well I cannot open it?
+  - character: {fileID: 11400000, guid: aa8b823ed295c3246aa35e3d66265fbc, type: 2}
+    myText: I see, I will find it is lever but first I need to speak with some people.
+  - character: {fileID: 11400000, guid: 315eb2c4b3c3b334dbed7c68436d37a4, type: 2}
+    myText: Any help would be appreciated.
+  questionText: 'What are you going to do now? '
   optionsInfo:
-  - buttonName: 
+  - buttonName: 'I am going to hangout around here. '
     nextDialogue: {fileID: 11400000, guid: 2ef92426dc82b0b4fa5abe15a46a00e1, type: 2}
     myEvent:
       m_PersistentCalls:
-        m_Calls: []
-  - buttonName: 
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: a0aeeff759ee98446bf005404b78c9f9, type: 2}
+          m_TargetAssemblyTypeName: EventBehaviour, Assembly-CSharp
+          m_MethodName: TestEvent01
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - buttonName: I am going to walk around here. I might even jog
     nextDialogue: {fileID: 11400000, guid: accfcb2eac03ffb4295ed9d3fcbbdb93, type: 2}
     myEvent:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: a0aeeff759ee98446bf005404b78c9f9, type: 2}
+          m_TargetAssemblyTypeName: EventBehaviour, Assembly-CSharp
+          m_MethodName: TestEvent02
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - buttonName: 
     nextDialogue: {fileID: 11400000, guid: a6c75c40da81fbb479c868f732c26c98, type: 2}
     myEvent:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: a0aeeff759ee98446bf005404b78c9f9, type: 2}
+          m_TargetAssemblyTypeName: EventBehaviour, Assembly-CSharp
+          m_MethodName: TestEvent03
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - buttonName: 
     nextDialogue: {fileID: 11400000, guid: 8a12a98c4272cf8409baa11a551dbe43, type: 2}
     myEvent:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: a0aeeff759ee98446bf005404b78c9f9, type: 2}
+          m_TargetAssemblyTypeName: EventBehaviour, Assembly-CSharp
+          m_MethodName: TestEvent04
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5a62c176514eaa448ba2c77b1e47112, type: 3}
   m_Name: Robo Dialogue 2
   m_EditorClassIdentifier: 
-  dialogueInfo: []
+  dialogueInfo:
+  - character: {fileID: 11400000, guid: aa8b823ed295c3246aa35e3d66265fbc, type: 2}
+    myText: I would like to workout for a few minutes.
+  - character: {fileID: 11400000, guid: 315eb2c4b3c3b334dbed7c68436d37a4, type: 2}
+    myText: 'That sounds like a good idea. '

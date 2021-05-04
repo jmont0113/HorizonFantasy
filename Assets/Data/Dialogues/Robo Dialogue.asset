@@ -17,7 +17,7 @@ MonoBehaviour:
   - Hey Robo. What can I do for you?
   - You see that door, well I cannot open it?
   - I see, I will find it's lever but first I need to speak with some people.
-  - Any help would be appreicated.
+  - Any help would be appreciated.
   actor:
   - {fileID: 11400000, guid: 842e350d9ccb4764e9abf22bc0c08f2e, type: 2}
   - {fileID: 11400000, guid: 8ad079a14b6a7fe4cbbc74305f3f0f0d, type: 2}
