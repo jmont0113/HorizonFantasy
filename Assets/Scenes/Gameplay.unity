@@ -2830,7 +2830,7 @@ PrefabInstance:
     - target: {fileID: 445408067719659928, guid: c6d3d5d64e3fe374293b98ad73f0361c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 445408067719659929, guid: c6d3d5d64e3fe374293b98ad73f0361c,
         type: 3}
@@ -3443,6 +3443,11 @@ PrefabInstance:
     m_TransformParent: {fileID: 1840873164}
     m_Modifications:
     - target: {fileID: 387119153, guid: 5dc638b8ed754144a9ff1a0757b216fc, type: 3}
+      propertyPath: DB
+      value: 
+      objectReference: {fileID: 11400000, guid: 1ecaa688476d47a459bff4cd14b87395,
+        type: 2}
+    - target: {fileID: 387119153, guid: 5dc638b8ed754144a9ff1a0757b216fc, type: 3}
       propertyPath: interactRange
       value: 1.5
       objectReference: {fileID: 0}
@@ -3450,6 +3455,11 @@ PrefabInstance:
       propertyPath: qManager
       value: 
       objectReference: {fileID: 1617833391}
+    - target: {fileID: 1953006055, guid: 5dc638b8ed754144a9ff1a0757b216fc, type: 3}
+      propertyPath: DB
+      value: 
+      objectReference: {fileID: 11400000, guid: 4cc453b52c0edd7418a555d13bcfc9c6,
+        type: 2}
     - target: {fileID: 1953006055, guid: 5dc638b8ed754144a9ff1a0757b216fc, type: 3}
       propertyPath: interactRange
       value: 1.5
@@ -3469,7 +3479,7 @@ PrefabInstance:
     - target: {fileID: 2031323552, guid: 5dc638b8ed754144a9ff1a0757b216fc, type: 3}
       propertyPath: DB
       value: 
-      objectReference: {fileID: 11400000, guid: 76208c0277d445947ad4a1f52ac7fb0c,
+      objectReference: {fileID: 11400000, guid: 2ab7e853a6e5fd44790903f6c274d646,
         type: 2}
     - target: {fileID: 2031323552, guid: 5dc638b8ed754144a9ff1a0757b216fc, type: 3}
       propertyPath: interactRange

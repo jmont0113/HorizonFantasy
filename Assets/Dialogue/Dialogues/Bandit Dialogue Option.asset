@@ -12,8 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14e4fcf7e3c078a43afb0436849fe737, type: 3}
   m_Name: Bandit Dialogue Option
   m_EditorClassIdentifier: 
-  dialogueInfo: []
-  questionText: 
+  dialogueInfo:
+  - character: {fileID: 11400000, guid: aa8b823ed295c3246aa35e3d66265fbc, type: 2}
+    myText: Hey, are you the bandit?
+  - character: {fileID: 11400000, guid: 3924d7222bddbc64dbbf9431840e35e0, type: 2}
+    myText: That is my name! What do you want?
+  - character: {fileID: 11400000, guid: aa8b823ed295c3246aa35e3d66265fbc, type: 2}
+    myText: I have been warned about you.
+  - character: {fileID: 11400000, guid: 3924d7222bddbc64dbbf9431840e35e0, type: 2}
+    myText: I am not your problem. Those slimes are....
+  - character: {fileID: 11400000, guid: aa8b823ed295c3246aa35e3d66265fbc, type: 2}
+    myText: I will take your word for it.
+  questionText: So... do you have anything planned for today?
   optionsInfo:
   - buttonName: 
     nextDialogue: {fileID: 11400000, guid: b010b7116d6242a44b69434aebcae8a0, type: 2}

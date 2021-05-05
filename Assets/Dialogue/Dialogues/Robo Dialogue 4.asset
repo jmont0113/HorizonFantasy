@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5a62c176514eaa448ba2c77b1e47112, type: 3}
   m_Name: Robo Dialogue 4
   m_EditorClassIdentifier: 
-  dialogueInfo: []
+  dialogueInfo:
+  - character: {fileID: 11400000, guid: aa8b823ed295c3246aa35e3d66265fbc, type: 2}
+    myText: 'I think Arthur needs me for something. '
+  - character: {fileID: 11400000, guid: 315eb2c4b3c3b334dbed7c68436d37a4, type: 2}
+    myText: Okay I understand. See you later.
+  - character: {fileID: 11400000, guid: aa8b823ed295c3246aa35e3d66265fbc, type: 2}
+    myText: 'I will return later and help you with the lever. '

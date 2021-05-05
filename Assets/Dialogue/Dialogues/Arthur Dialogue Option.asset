@@ -12,8 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14e4fcf7e3c078a43afb0436849fe737, type: 3}
   m_Name: Arthur Dialogue Option
   m_EditorClassIdentifier: 
-  dialogueInfo: []
-  questionText: 
+  dialogueInfo:
+  - character: {fileID: 11400000, guid: 628e15a298ee30548aaaadba05342ba5, type: 2}
+    myText: Hello Vivian! Where are you going?
+  - character: {fileID: 11400000, guid: aa8b823ed295c3246aa35e3d66265fbc, type: 2}
+    myText: Hey Arthur, I am talking to some people around the village.
+  - character: {fileID: 11400000, guid: 628e15a298ee30548aaaadba05342ba5, type: 2}
+    myText: Sounds good but watch out for that bandit.
+  - character: {fileID: 11400000, guid: aa8b823ed295c3246aa35e3d66265fbc, type: 2}
+    myText: What is wrong with the bandit?
+  - character: {fileID: 11400000, guid: 628e15a298ee30548aaaadba05342ba5, type: 2}
+    myText: He seems shady to me so stay on guard with him.
+  questionText: 'Where are you going? '
   optionsInfo:
   - buttonName: 
     nextDialogue: {fileID: 11400000, guid: d3073e6fe8658f842be3902004c7ae96, type: 2}

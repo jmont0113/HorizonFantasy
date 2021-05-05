@@ -59,7 +59,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - buttonName: 
+  - buttonName: 'I am enjoying the nature. '
     nextDialogue: {fileID: 11400000, guid: a6c75c40da81fbb479c868f732c26c98, type: 2}
     myEvent:
       m_PersistentCalls:
@@ -76,7 +76,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - buttonName: 
+  - buttonName: I am going to speak to Arthur
     nextDialogue: {fileID: 11400000, guid: 8a12a98c4272cf8409baa11a551dbe43, type: 2}
     myEvent:
       m_PersistentCalls:
