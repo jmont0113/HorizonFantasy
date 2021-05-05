@@ -25,7 +25,7 @@ MonoBehaviour:
     myText: Any help would be appreciated.
   questionText: 'What are you going to do now? '
   optionsInfo:
-  - buttonName: 'I am going to hangout around here. '
+  - buttonName: 'I am going to hangout with some friends. '
     nextDialogue: {fileID: 11400000, guid: 2ef92426dc82b0b4fa5abe15a46a00e1, type: 2}
     myEvent:
       m_PersistentCalls:

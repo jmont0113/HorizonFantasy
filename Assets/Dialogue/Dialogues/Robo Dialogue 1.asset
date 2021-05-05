@@ -16,6 +16,6 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: aa8b823ed295c3246aa35e3d66265fbc, type: 2}
     myText: 'I am going hangout with some other people in the town. '
   - character: {fileID: 11400000, guid: 315eb2c4b3c3b334dbed7c68436d37a4, type: 2}
-    myText: 'Okay, please do not forget that door. '
+    myText: 'Okay, please do not forget that door and the lever. '
   - character: {fileID: 11400000, guid: aa8b823ed295c3246aa35e3d66265fbc, type: 2}
     myText: 'I won''t. Just give me a minute. '
