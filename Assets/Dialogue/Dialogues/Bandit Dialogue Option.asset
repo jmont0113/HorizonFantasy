@@ -25,7 +25,7 @@ MonoBehaviour:
     myText: I will take your word for it.
   questionText: So... do you have anything planned for today?
   optionsInfo:
-  - buttonName: 
+  - buttonName: I going to help out Robo.
     nextDialogue: {fileID: 11400000, guid: b010b7116d6242a44b69434aebcae8a0, type: 2}
     myEvent:
       m_PersistentCalls:
@@ -42,7 +42,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - buttonName: 
+  - buttonName: I going to speak to Arthur.
     nextDialogue: {fileID: 11400000, guid: 90e945af2fd925e48a20ec1debf3ca71, type: 2}
     myEvent:
       m_PersistentCalls:
@@ -59,7 +59,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - buttonName: 
+  - buttonName: I am going to fight some slime.
     nextDialogue: {fileID: 11400000, guid: 0f97e4c545a4a1c4d91b0e80791f7620, type: 2}
     myEvent:
       m_PersistentCalls:
@@ -76,7 +76,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - buttonName: 
+  - buttonName: I think I will look around town.
     nextDialogue: {fileID: 11400000, guid: ed172b6bd6e7a7e4c99f9eabb68ec8b3, type: 2}
     myEvent:
       m_PersistentCalls:

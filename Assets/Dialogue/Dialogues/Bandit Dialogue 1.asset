@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5a62c176514eaa448ba2c77b1e47112, type: 3}
   m_Name: Bandit Dialogue 1
   m_EditorClassIdentifier: 
-  dialogueInfo: []
+  dialogueInfo:
+  - character: {fileID: 11400000, guid: aa8b823ed295c3246aa35e3d66265fbc, type: 2}
+    myText: I am going help Robo with some lever on the other side of town.
+  - character: {fileID: 11400000, guid: 3924d7222bddbc64dbbf9431840e35e0, type: 2}
+    myText: 'That seems noble. '
+  - character: {fileID: 11400000, guid: aa8b823ed295c3246aa35e3d66265fbc, type: 2}
+    myText: "I guess\u2026."

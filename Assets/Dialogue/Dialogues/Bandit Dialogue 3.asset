@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5a62c176514eaa448ba2c77b1e47112, type: 3}
   m_Name: Bandit Dialogue 3
   m_EditorClassIdentifier: 
-  dialogueInfo: []
+  dialogueInfo:
+  - character: {fileID: 11400000, guid: aa8b823ed295c3246aa35e3d66265fbc, type: 2}
+    myText: I going to challenge those slime.
+  - character: {fileID: 11400000, guid: 3924d7222bddbc64dbbf9431840e35e0, type: 2}
+    myText: Watch your back.
+  - character: {fileID: 11400000, guid: aa8b823ed295c3246aa35e3d66265fbc, type: 2}
+    myText: "Will do. Thanks, I guess\u2026"

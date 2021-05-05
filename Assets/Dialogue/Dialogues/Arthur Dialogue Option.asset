@@ -25,7 +25,7 @@ MonoBehaviour:
     myText: He seems shady to me so stay on guard with him.
   questionText: 'Where are you going? '
   optionsInfo:
-  - buttonName: 
+  - buttonName: I need to help Robo.
     nextDialogue: {fileID: 11400000, guid: d3073e6fe8658f842be3902004c7ae96, type: 2}
     myEvent:
       m_PersistentCalls:
@@ -42,7 +42,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - buttonName: 
+  - buttonName: I going to speak to the Bandit.
     nextDialogue: {fileID: 11400000, guid: 0f352932af3d46c439003d9f970d4a24, type: 2}
     myEvent:
       m_PersistentCalls:
@@ -59,7 +59,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - buttonName: 
+  - buttonName: I am going to battle some slimes.
     nextDialogue: {fileID: 11400000, guid: 39073499d21a7f94d989f49b15966e72, type: 2}
     myEvent:
       m_PersistentCalls:
@@ -76,7 +76,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - buttonName: 
+  - buttonName: 'I going to hang out around the village. '
     nextDialogue: {fileID: 11400000, guid: 45b66aef2c91cbd4b8b27bf6390cc78c, type: 2}
     myEvent:
       m_PersistentCalls:
